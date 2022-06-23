@@ -1,11 +1,13 @@
 <script>
 
 	import Top from "./lib/TopSofC.svelte";
+	import Map from "./lib/Map.svelte";
 
 </script>
 
 <main>
 	<Top />
+	<Map />
 </main>
 
 <style>
