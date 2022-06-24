@@ -2,6 +2,8 @@
 
 	import Top from "./lib/TopSofC.svelte";
 	import Map from "./lib/Map.svelte";
+	import inc1961 from "./data/1961.geo.json";
+	import inc1971 from "./data/1971.geo.json";
 
 </script>
 
@@ -13,14 +15,19 @@
 		<h1>Hello</h1>
 	</div>
 	<div class="mapBig">
-		<Map />
+		<Map year={"1961"}
+		tracts={inc1961.features}/>
 	</div>
 	<div class="text">
 		<p>Hello</p>
 	</div>
 	<div class="mapSmall">
-		<b>1961</b>
-		<Map />
+		<b>1960</b>
+		<Map year={"1961"} tracts={inc1961.features}/>
+	</div>
+	<div class="mapSmall">
+		<b>1970</b>
+		<Map year={"1971"} tracts={inc1971.features}/>
 	</div>
 
 </main>
@@ -63,11 +70,17 @@
 	.mapBig {
 		margin: auto;
 		max-width: 800px;
+		border: solid 1px rgb(243, 232, 232);
+		/* border-radius: 5px; */
+		border-bottom-right-radius: 200px;
 	}
 
 	.mapSmall {
 		margin: auto;
 		max-width: 400px;
+		border: solid 1px rgb(243, 232, 232);
+		/* border-radius: 5px; */
+		border-bottom-right-radius: 100px;
 	}
 	
 </style>
