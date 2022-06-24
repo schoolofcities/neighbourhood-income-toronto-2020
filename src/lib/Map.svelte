@@ -1,8 +1,13 @@
 <script>
 	import inc1961 from "../data/1961.geo.json";
 	import formerMun from "../data/formerMun5.geo.json";
-
 	import { geoPath, geoMercator, scaleThreshold } from "d3";
+
+	export const year = "1961";
+
+	const avgInc = {
+		"1961": 4306.65
+	}
 
 	const projection = geoMercator()
 		.center([-79.31, 43.76])
@@ -15,13 +20,9 @@
 	const width = 800,
 		height = 550;
 
-	let values = tracts.map(item => item.properties.avg_inc);
-	console.log(values)
-
 	var color = scaleThreshold()
-    .domain([5000,8000])
-    .range(["red", "white", "green"]);
-
+    .domain([avgInc[year] * 0.6, avgInc[year] * 0.8, avgInc[year] * 1.2, avgInc[year] * 1.4	])
+    .range(['#DC4633','#e89a91','#ece2b8','#7bccc0','#00a189']);
 
 	tracts.map(item => {item.properties.color = color(item.properties.avg_inc)});
 
@@ -40,10 +41,9 @@
 
 <style>
 	main {
-		background-color: aquamarine;
-	}
+		border: solid 1px rgb(0, 255, 170)	}
 	#meow {
-		background-color: antiquewhite;
+		border: solid 1px black;
 	}
 
 	#ct {
