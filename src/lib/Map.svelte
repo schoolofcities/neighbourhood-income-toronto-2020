@@ -2,17 +2,13 @@
 
 import { json } from "d3";
 import Marks from "./Marks.svelte";
-import inc1961 from "../data/1961.json";
+import inc1961 from "../data/1961.geo.json";
+import formerMun from "../data/formerMun5.geo.json"
 
 let dataset = inc1961.features;
-console.log(dataset)
+console.log(dataset);
 
-// let dataset = [];
-//   json(
-//     "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
-//   ).then((data) => {
-//     dataset = data.features;
-//   });
+console.log(formerMun.features);
 
 const width = 1200, height = 600;
 </script>

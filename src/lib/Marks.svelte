@@ -1,26 +1,26 @@
 <script>
-	import { geoPath, geoNaturalEarth1, geoMercator } from "d3";
+	import { geoPath, geoMercator } from "d3";
 	export let dataset = [];
 	import { draw } from "svelte/transition";
 	import { quadInOut } from "svelte/easing";
 	
 	const projection = geoMercator()
 	.center([-79.42, 43.73])
-	.scale([100000])
+	.scale([75000])
 	.angle([-17]);
 	const path = geoPath(projection);
   </script>
   
   {#each dataset as data}
-	<path
+	<path id="ct"
 	  transition:draw={{ duration: 5000, delay: 0, easing: quadInOut }}
-	  d={path(data)}
+	  d={path(data)} fill="grey" 
 	/>
   {/each}
   
   <style>
-	path {
-	  fill: none;
-	  stroke: rgb(0, 0, 0);
+	#ct {
+		stroke: rgb(237, 237, 237);
+		stroke-width: 1px;
 	}
   </style>
