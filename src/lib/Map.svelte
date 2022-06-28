@@ -11,7 +11,9 @@
 	const avgInc = {
 		"1961": 4307,
 		"1971": 11748,
-		"1981": 27476
+		"1981": 27476,
+		"1991": 54601,
+		"2001": 69125
 	};
 
 	let divWidth = 800;
@@ -29,10 +31,10 @@
 		
 	var color = scaleThreshold()
 		.domain([
-			avgInc[year] * 0.6,
-			avgInc[year] * 0.8,
-			avgInc[year] * 1.2,
-			avgInc[year] * 1.4,
+			avgInc[year] * 0.7,
+			avgInc[year] * 0.85,
+			avgInc[year] * 1.15,
+			avgInc[year] * 1.3,
 		])
 		.range(["#DC4633", "#e89a91", "#F8F4E0", "#bed9dd", "#6FC7EA"]);
 

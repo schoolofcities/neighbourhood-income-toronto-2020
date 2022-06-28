@@ -5,6 +5,8 @@
 	import inc1961 from "./data/1961.geo.json";
 	import inc1971 from "./data/1971.geo.json";
 	import inc1981 from "./data/1981.geo.json";
+	import inc1991 from "./data/1991.geo.json";
+	import inc2001 from "./data/2001.geo.json";
 </script>
 
 
@@ -14,10 +16,10 @@
 	<div class="title">
 		<h1>Hello</h1>
 	</div>
-	<div class="mapBig">
+	<!-- <div class="mapBig">
 		<Map year={"1961"}
 		tracts={inc1961.features}/>
-	</div>
+	</div> -->
 	<div class="text">
 		<p>Hello</p>
 	</div>
@@ -31,6 +33,11 @@
 		</div>
 		<div class="mapSmall">
 			<Map year={"1981"} tracts={inc1981.features}/>
+		</div><div class="mapSmall">
+			<Map year={"1991"} tracts={inc1991.features}/>
+		</div>
+		<div class="mapSmall">
+			<Map year={"2001"} tracts={inc2001.features}/>
 		</div>
 	</div>
 
