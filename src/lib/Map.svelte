@@ -9,8 +9,9 @@
 	console.log(year)
 
 	const avgInc = {
-		"1961": 4306.65,
-		"1971": 11748.2
+		"1961": 4307,
+		"1971": 11748,
+		"1981": 27476
 	};
 
 	let divWidth = 800;
@@ -33,7 +34,7 @@
 			avgInc[year] * 1.2,
 			avgInc[year] * 1.4,
 		])
-		.range(["#DC4633", "#e89a91", "#e6e3d6", "#bed9dd", "#6FC7EA"]);
+		.range(["#DC4633", "#e89a91", "#F8F4E0", "#bed9dd", "#6FC7EA"]);
 
 	tracts.map((item) => {
 		item.properties.avg_inc
@@ -53,6 +54,7 @@
 		{#each formerMun.features as data}
 			<path id="fm" d={path(data)} />
 		{/each}
+		<text id="year-label" x="2" y="22">{year}</text>
 	</svg>
 </div>
 	
@@ -80,5 +82,10 @@
 		stroke: rgb(107, 107, 107);
 		stroke-width: 1 px;
 		fill-opacity: 0;
+	}
+	#year-label {
+		font-size: 14px;
+		fill: rgb(103, 103, 103);
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 </style>
