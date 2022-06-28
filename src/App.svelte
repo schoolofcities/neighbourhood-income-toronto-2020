@@ -7,26 +7,43 @@
 	import inc1981 from "./data/1981.geo.json";
 	import inc1991 from "./data/1991.geo.json";
 	import inc2001 from "./data/2001.geo.json";
+	import inc2011 from "./data/2011.geo.json";
+
+
+	let colours = ["#DC4633", "#ee9d78", "#e9e2c0", "#7eb4b3", "#007fa3"]
+	let spacing = [50, 100, 150, 200, 250]
+
 </script>
 
 
 <Top />
 <main>
+
+	<div class="circles">
+	  <svg>
+		{#each [0,1,2,3,4] as d}
+		  <circle cx={spacing[d]} cy="50%" r=5 fill={colours[d]} />
+		{/each}
+	  </svg>
+	</div>
 	
 	<div class="title">
 		<h1>Hello</h1>
 	</div>
-	<!-- <div class="mapBig">
-		<Map year={"1961"}
-		tracts={inc1961.features}/>
-	</div> -->
+
+	
+	<div class="mapBig">
+		<Map year={"2011"}
+		tracts={inc2011.features}/>
+	</div>
+	
 	<div class="text">
-		<p>Hello</p>
+		<p>For the six decades prior, clearly showing how lower-income neighbourhoods were once clustered in the centre.</p>
 	</div>
 
 	<div class="mapGrid">
 		<div class="mapSmall">
-				<Map year={"1961"} tracts={inc1961.features}/>
+			<Map year={"1961"} tracts={inc1961.features}/>
 		</div>
 		<div class="mapSmall">
 			<Map year={"1971"} tracts={inc1971.features}/>
@@ -38,6 +55,9 @@
 		</div>
 		<div class="mapSmall">
 			<Map year={"2001"} tracts={inc2001.features}/>
+		</div>
+		<div class="mapSmall">
+			<Map year={"2011"} tracts={inc2011.features}/>
 		</div>
 	</div>
 
@@ -64,6 +84,12 @@
 		width: 100%;
 		max-width: 900px;
 		position: relative;
+	}
+
+	.circles {
+		margin: auto;
+		max-width: 300px;
+		height: 20px;
 	}
 
 	.title {

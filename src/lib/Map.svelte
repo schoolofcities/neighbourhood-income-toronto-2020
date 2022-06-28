@@ -13,7 +13,8 @@
 		"1971": 11748,
 		"1981": 27476,
 		"1991": 54601,
-		"2001": 69125
+		"2001": 69125,
+		"2011": 87038
 	};
 
 	let divWidth = 800;
@@ -36,7 +37,7 @@
 			avgInc[year] * 1.15,
 			avgInc[year] * 1.3,
 		])
-		.range(["#DC4633", "#e89a91", "#F8F4E0", "#bed9dd", "#6FC7EA"]);
+		.range(["#DC4633", "#ee9d78", "#e9e2c0", "#7eb4b3", "#007fa3"]);
 
 	tracts.map((item) => {
 		item.properties.avg_inc
@@ -81,8 +82,8 @@
 		stroke-width: 1px;
 	}
 	#fm {
-		stroke: rgb(107, 107, 107);
-		stroke-width: 1 px;
+		stroke: rgb(0, 0, 0);
+		stroke-width:1 px;
 		fill-opacity: 0;
 	}
 	#year-label {
