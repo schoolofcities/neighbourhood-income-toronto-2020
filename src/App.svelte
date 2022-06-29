@@ -22,15 +22,20 @@
 	<div class="circles">
 	  <svg>
 		{#each [0,1,2,3,4] as d}
-		  <circle cx={spacing[d]} cy="50%" r=5 fill={colours[d]} />
+		  <circle cx={spacing[d]} cy="50%" r=10 fill={colours[d]} stroke= "white" stroke-width="2px" />
 		{/each}
 	  </svg>
 	</div>
 	
 	<div class="title">
-		<h1>Hello</h1>
+		<h2>Wealth inequlities and poverty concentration in Toronto</h2>
+
+		<h4>A first look at data from the 2021 census</h4>
 	</div>
 
+	<div class="text">
+		<p>On</p>
+	</div>
 	
 	<div class="mapBig">
 		<Map year={"2011"}
@@ -43,21 +48,21 @@
 
 	<div class="mapGrid">
 		<div class="mapSmall">
-			<Map year={"1961"} tracts={inc1961.features}/>
+			<Map year={"1961"} tracts={inc1961.features} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1971"} tracts={inc1971.features}/>
+			<Map year={"1971"} tracts={inc1971.features} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1981"} tracts={inc1981.features}/>
+			<Map year={"1981"} tracts={inc1981.features} type={"smallMultiple"}/>
 		</div><div class="mapSmall">
-			<Map year={"1991"} tracts={inc1991.features}/>
+			<Map year={"1991"} tracts={inc1991.features} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2001"} tracts={inc2001.features}/>
+			<Map year={"2001"} tracts={inc2001.features} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2011"} tracts={inc2011.features}/>
+			<Map year={"2011"} tracts={inc2011.features} type={"smallMultiple"}/>
 		</div>
 	</div>
 
@@ -76,7 +81,7 @@
 	:global(body) {
 		padding: 0px;
 		margin: 0px;
-		background-color: #ffffff;
+		background-color: #fff5ec;
 	}
 
 	main {
@@ -89,7 +94,8 @@
 	.circles {
 		margin: auto;
 		max-width: 300px;
-		height: 20px;
+		margin-top: 10px;
+		height: 40px;
 	}
 
 	.title {
@@ -133,7 +139,7 @@
 		padding: -10px;
 		max-width: 400px;
 		border: solid 1px rgb(238, 238, 238);
-		/* border-radius: 5px; */
+		border-radius: 10px;
 		border-bottom-right-radius: 100px;
 	}
 	

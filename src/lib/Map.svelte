@@ -5,6 +5,7 @@
 
 	export var year;
 	export var tracts;
+	export var type = "smallMultiple";
 
 	console.log(year)
 
@@ -57,7 +58,7 @@
 		{#each formerMun.features as data}
 			<path id="fm" d={path(data)} />
 		{/each}
-		<text id="year-label" x="2" y="22">{year}</text>
+		<text id="year-label" x="5" y="22">{year}</text>
 	</svg>
 </div>
 	
