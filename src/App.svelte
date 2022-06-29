@@ -2,12 +2,12 @@
 
 	import Top from "./lib/TopSofC.svelte";
 	import Map from "./lib/Map.svelte";
-	import inc1961 from "./data/1961.geo.json";
-	import inc1971 from "./data/1971.geo.json";
-	import inc1981 from "./data/1981.geo.json";
-	import inc1991 from "./data/1991.geo.json";
-	import inc2001 from "./data/2001.geo.json";
-	import inc2011 from "./data/2011.geo.json";
+	import inc1960 from "./data/1960.geo.json";
+	import inc1970 from "./data/1970.geo.json";
+	import inc1980 from "./data/1980.geo.json";
+	import inc1990 from "./data/1990.geo.json"
+	import inc2000 from "./data/2000.geo.json";
+	import inc2010 from "./data/2010.geo.json";
 
 	let colours = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
 	let spacing = [50, 100, 150, 200, 250]
@@ -60,8 +60,8 @@
 
 	
 	<div class="mapBig">
-		<Map year={"2011"}
-		tracts={inc2011.features} colours = {colours} type={"main"}/>
+		<Map year={"2010"}
+		tracts={inc2010.features} colours = {colours} type={"main"}/>
 	</div>
 	
 	<div class="text">
@@ -70,21 +70,21 @@
 
 	<div class="mapGrid">
 		<div class="mapSmall">
-			<Map year={"1961"} tracts={inc1961.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1960"} tracts={inc1960.features} colours = {colours} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1971"} tracts={inc1971.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1970"} tracts={inc1970.features} colours = {colours} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1981"} tracts={inc1981.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1980"} tracts={inc1980.features} colours = {colours} type={"smallMultiple"}/>
 		</div><div class="mapSmall">
-			<Map year={"1991"} tracts={inc1991.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1990"} tracts={inc1990.features} colours = {colours} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2001"} tracts={inc2001.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"2000"} tracts={inc2000.features} colours = {colours} type={"smallMultiple"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2011"} tracts={inc2011.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"2010"} tracts={inc2010.features} colours = {colours} type={"smallMultiple"}/>
 		</div>
 	</div>
 
@@ -142,6 +142,8 @@
 		margin: auto;
 		max-width: 600px;
 		width: 100%;
+		padding-top: 25px;
+		padding-bottom: 25px;
 	}
 
 	.mapBig {
