@@ -10,8 +10,6 @@
 	export var colours;
 	export var type;
 
-	console.log(type)
-
 	const avgInc = {
 		"1960": 4307,
 		"1970": 11748,
@@ -49,19 +47,32 @@
 			: (item.properties.color = "white");
 	});
 
-	let placeLabel = true;
+	$: placeLabel = true;
 	function labelToggle() {
 		placeLabel = !placeLabel;
+	}
+	$: if (divWidth < 800) {
+		placeLabel = false
 	}
 </script>
 
 <div id="container" class="svg-container" bind:offsetWidth={divWidth}>
 
 	{#if type == "main"}
+
+		<div class="layer-button">
+			<button>Average Household Income</button>
+		
+			<button>Average Individual Income</button>
+		
+			<button>Poverty Rate</button>
+		</div>
+
 		<div id="labels">
 			<button 
 			id="label-button"
-			class:selected="{placeLabel}"	
+			class:label-selected="{placeLabel}"
+			class:label-off="{divWidth < 800}"	
 			on:click={labelToggle}>
 				Labels
 			</button>			
@@ -86,7 +97,6 @@
 				<path id="subway-lines" d={path(data)} />
 			{/each}
 			{#each subwayStations.features as data}
-				{console.log(data.geometry.coordinates)}
 				<circle
 				class="subway-stop"
 				cx={projection(data.geometry.coordinates)[0]}
@@ -96,9 +106,7 @@
 			{/each}
 		{/if}
 
-		{#if type == "main" && placeLabel}
-			{console.log(type, placeLabel)}
-			
+		{#if type == "main" && placeLabel}	
 			<text id="place-label" x="301" y="88">North York</text>
 			<text id="place-label" x="389" y="243">East York</text>
 			<text id="place-label" x="227" y="207">York</text>
@@ -177,7 +185,10 @@
 	#label-button:hover {
 		color: #007fa3;
 	}
-	.selected {
+	.label-selected {
 		background-color: rgb(255, 255, 255);
+	}
+	.label-off {
+		display: none;
 	}
 </style>

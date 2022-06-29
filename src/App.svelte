@@ -48,14 +48,14 @@
 			</svg>
 		</div>
 		
-		<h3>A first look at data from the 2021 census</h3>
+		<h3>A first look at income data from the 2021 census</h3>
 		<div id="mini-line"></div>
 	</div>
 
 	
 
 	<div class="text">
-		<p>On</p>
+		<p>On. Here's a map of the City of Toronto showing three pertinent variables</p>
 	</div>
 
 	
@@ -138,12 +138,13 @@
 
 	.text {
 		font-family: "Source Serif Pro", serif;
-		font-size: 17px;
+		font-size: 19px;
 		margin: auto;
 		max-width: 600px;
 		width: 100%;
 		padding-top: 25px;
 		padding-bottom: 25px;
+		line-height: 160%;
 	}
 
 	.mapBig {
