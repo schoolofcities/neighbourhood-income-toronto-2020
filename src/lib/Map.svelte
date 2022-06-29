@@ -6,9 +6,9 @@
 	export var year;
 	export var tracts;
 	export var colours;
-	export var type = "smallMultiple";
+	export var type;
 
-	console.log(year)
+	console.log(type)
 
 	const avgInc = {
 		"1961": 4307,
@@ -59,7 +59,10 @@
 		{#each formerMun.features as data}
 			<path id="fm" d={path(data)} />
 		{/each}
-		<text id="year-label" x="5" y="22">{year}</text>
+		{#if type == "smallMultiple"}
+			{console.log(type)}
+			<text id="year-label" x="5" y="22">{year}</text>
+		{/if}
 	</svg>
 </div>
 	

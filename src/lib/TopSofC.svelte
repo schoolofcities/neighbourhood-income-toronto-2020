@@ -20,7 +20,7 @@
 		padding-right: 0px;
 		text-align: center;
 		z-index: 5;
-		opacity: 0.95;
+		opacity: 0.98;
 		box-shadow: 0 1px 0 0 rgba(227, 227, 227, 0.268);
 	}
 	img {

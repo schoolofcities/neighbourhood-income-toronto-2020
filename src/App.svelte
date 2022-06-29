@@ -61,7 +61,7 @@
 	
 	<div class="mapBig">
 		<Map year={"2011"}
-		tracts={inc2011.features} colours = {colours} />
+		tracts={inc2011.features} colours = {colours} type={"big"}/>
 	</div>
 	
 	<div class="text">
