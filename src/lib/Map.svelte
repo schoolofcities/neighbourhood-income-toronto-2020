@@ -5,6 +5,7 @@
 
 	export var year;
 	export var tracts;
+	export var colours;
 	export var type = "smallMultiple";
 
 	console.log(year)
@@ -38,7 +39,7 @@
 			avgInc[year] * 1.15,
 			avgInc[year] * 1.3,
 		])
-		.range(["#DC4633", "#ee9d78", "#e9e2c0", "#7eb4b3", "#007fa3"]);
+		.range(colours);
 
 	tracts.map((item) => {
 		item.properties.avg_inc
