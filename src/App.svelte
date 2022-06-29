@@ -61,7 +61,7 @@
 	
 	<div class="mapBig">
 		<Map year={"2011"}
-		tracts={inc2011.features} colours = {colours} type={"big"}/>
+		tracts={inc2011.features} colours = {colours} type={"main"}/>
 	</div>
 	
 	<div class="text">
@@ -137,6 +137,8 @@
 	}
 
 	.text {
+		font-family: "Source Serif Pro", serif;
+		font-size: 17px;
 		margin: auto;
 		max-width: 600px;
 		width: 100%;
@@ -145,9 +147,9 @@
 	.mapBig {
 		margin: auto;
 		max-width: 810px;
-		border: solid 1px rgb(238, 238, 238);
+		/* border: solid 1px rgb(238, 238, 238); */
 		/* border-radius: 5px; */
-		border-bottom-right-radius: 200px;
+		/* border-bottom-right-radius: 200px; */
 	}
 
 	.mapGrid {

@@ -30,7 +30,7 @@
 		.center([-0.001* innerWidth - 78.49, 0.00015 * innerWidth + 43.58 ])
 		.scale([75000 * innerWidth / 800])
 		.angle([-17]);
-	$: path = geoPath(projection);	
+	$: path = geoPath(projection);
 		
 	var color = scaleThreshold()
 		.domain([
@@ -46,9 +46,23 @@
 			? (item.properties.color = color(item.properties.avg_inc))
 			: (item.properties.color = "white");
 	});
+
+	let placeLabel = true;
+	function labelToggle() {
+		placeLabel = !placeLabel;
+	}
 </script>
 
 <div id="container" class="svg-container" bind:offsetWidth={divWidth}>
+
+	{#if type == "main"}
+		<div id="labels">
+			<button id="label-button" on:click={labelToggle}>
+				Labels
+			</button>			
+		</div>
+	{/if}
+	
 	<svg width={innerWidth} height={height} id="meow">
 		{#each formerMun.features as data}
 			<path id="fm-back" d={path(data)} />
@@ -60,10 +74,16 @@
 			<path id="fm" d={path(data)} />
 		{/each}
 		{#if type == "smallMultiple"}
-			{console.log(type)}
 			<text id="year-label" x="5" y="22">{year}</text>
 		{/if}
+		{#if type == "main" && placeLabel}
+			{console.log(type, placeLabel)}
+			
+			<text id="place-label" x="301" y="88">North York</text>
+			
+		{/if}
 	</svg>
+	
 </div>
 	
 <style>
@@ -95,5 +115,29 @@
 		font-size: 14px;
 		fill: rgb(103, 103, 103);
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+	#place-label {
+		font-size: 20px;
+		fill: rgb(0, 0, 0);
+		font-weight: bold;
+		paint-order: stroke;
+		stroke: #fff;
+		stroke-opacity: 0.75;
+		stroke-width: 5px;
+		stroke-linecap: butt;
+		stroke-linejoin: miter;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+	#label-button {
+		background-color: white;
+		border: solid 1px rgb(176, 176, 176);
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,	 Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		color:  rgb(103, 103, 103);
+		cursor: pointer;
+		border-radius: 10px;
+		padding: 4px;
+	}
+	#label-button:hover {
+		color: #007fa3;
 	}
 </style>
