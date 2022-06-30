@@ -2,6 +2,7 @@
 
 	import Top from "./lib/TopSofC.svelte";
 	import Map from "./lib/Map.svelte";
+	import MapMini from "./lib/MapMini.svelte";
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
 	import inc1980 from "./data/1980.geo.json";
@@ -35,10 +36,9 @@
 
 
 <Top />
+
 <main>
 
-	
-	
 	<div class="title">
 		<div id="mini-line"></div>
 		<h1>Wealth inequalities and poverty concentration in Toronto</h1>
@@ -54,7 +54,6 @@
 		<div id="mini-line"></div>
 	</div>
 
-	
 
 	<div class="text">
 		<p>On. Here's a map of the City of Toronto showing three pertinent variables</p>
@@ -66,32 +65,41 @@
 		tracts={inc2010.features} colours = {colours} type={"main"} variable={"avg_inc"}/>
 	</div>
 	
+
 	<div class="text">
 		<p>For the six decades prior, clearly showing how lower-income neighbourhoods were once clustered in the centre.</p>
 	</div>
 
+
 	<div class="mapGrid">
 		<div class="mapSmall">
-			<Map year={"1960"} tracts={inc1960.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
+			<MapMini year={"1960"} tracts={inc1960.features} colours = {colours}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1970"} tracts={inc1970.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
+			<MapMini year={"1970"} tracts={inc1970.features} colours = {colours}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1980"} tracts={inc1980.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
+			<MapMini year={"1980"} tracts={inc1980.features} colours = {colours}  variable={"avg_inc"}/>
 		</div><div class="mapSmall">
-			<Map year={"1990"} tracts={inc1990.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
+			<MapMini year={"1990"} tracts={inc1990.features} colours = {colours}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2000"} tracts={inc2000.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
+			<MapMini year={"2000"} tracts={inc2000.features} colours = {colours}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2010"} tracts={inc2010.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
+			<MapMini year={"2010"} tracts={inc2010.features} colours = {colours}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2020"} tracts={inc2020.features} colours = {colours} type={"smallMultiple"} variable={"ii16"}/>
+			<MapMini year={"2020"} tracts={inc2020.features} colours = {colours}  variable={"ii16"}/>
 		</div>
 	</div>
+
+
+	<div class="text">
+		<p>Indeed meow meow</p>
+	</div>
+
+	<div id="mini-line"></div>
 
 	<div class="text">
 		<p>Indeed meow meow</p>
