@@ -9,6 +9,7 @@
 	export var tracts;
 	export var colours;
 	export var type;
+	export var variable;
 
 	const avgInc = {
 		"1960": 4307,
@@ -42,8 +43,8 @@
 		.range(colours);
 
 	tracts.map((item) => {
-		item.properties.avg_inc
-			? (item.properties.color = color(item.properties.avg_inc))
+		item.properties[variable]
+			? (item.properties.color = color(item.properties[variable]))
 			: (item.properties.color = "white");
 	});
 

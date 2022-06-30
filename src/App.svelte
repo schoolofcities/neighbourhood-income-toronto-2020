@@ -61,7 +61,7 @@
 	
 	<div class="mapBig">
 		<Map year={"2010"}
-		tracts={inc2010.features} colours = {colours} type={"main"}/>
+		tracts={inc2010.features} colours = {colours} type={"main"} variable={"avg_inc"}/>
 	</div>
 	
 	<div class="text">
@@ -70,21 +70,21 @@
 
 	<div class="mapGrid">
 		<div class="mapSmall">
-			<Map year={"1960"} tracts={inc1960.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1960"} tracts={inc1960.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1970"} tracts={inc1970.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1970"} tracts={inc1970.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"1980"} tracts={inc1980.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1980"} tracts={inc1980.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
 		</div><div class="mapSmall">
-			<Map year={"1990"} tracts={inc1990.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"1990"} tracts={inc1990.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2000"} tracts={inc2000.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"2000"} tracts={inc2000.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<Map year={"2010"} tracts={inc2010.features} colours = {colours} type={"smallMultiple"}/>
+			<Map year={"2010"} tracts={inc2010.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
 		</div>
 	</div>
 
