@@ -8,6 +8,8 @@
 	import inc1990 from "./data/1990.geo.json"
 	import inc2000 from "./data/2000.geo.json";
 	import inc2010 from "./data/2010.geo.json";
+	import inc2020 from "./data/2020.geo.json";
+
 
 	let colours = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
 	let spacing = [50, 100, 150, 200, 250]
@@ -86,6 +88,13 @@
 		<div class="mapSmall">
 			<Map year={"2010"} tracts={inc2010.features} colours = {colours} type={"smallMultiple"} variable={"avg_inc"}/>
 		</div>
+		<div class="mapSmall">
+			<Map year={"2020"} tracts={inc2020.features} colours = {colours} type={"smallMultiple"} variable={"ii16"}/>
+		</div>
+	</div>
+
+	<div class="text">
+		<p>Indeed meow meow</p>
 	</div>
 
 </main>
