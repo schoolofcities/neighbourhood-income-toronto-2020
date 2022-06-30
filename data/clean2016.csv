@@ -1,4 +1,4 @@
-GEO_CODE (POR),pop2016,pop2011,popchange,dwe,dwe_occ,hhlds,hhld_size,avg_inc_ind,avg_inc_hhld,lim_at,lico_at
+ctuid,pop2016,pop2011,popchange,dwe,dwe_occ,hhlds,hhld_size,avg_inc_ind,avg_inc_hhld,lim_at,lico_at
 001,205955.0,196954.0,4.6,92353.0,85015.0,85015.0,2.4,52803.0,102635.0,12.0,7.5
 0010001.00,1734.0,2064.0,-16.0,719.0,698.0,695.0,2.5,35182.0,71020.0,23.9,9.5
 0010002.00,4538.0,4860.0,-6.6,2318.0,2131.0,2130.0,2.1,59759.0,101424.0,15.5,9.1
