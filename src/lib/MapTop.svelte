@@ -4,24 +4,11 @@
 	import subwayLines from "../data/subwayLines.geo.json";
 	import subwayStations from "../data/subwayStations.geo.json";
 	import { geoPath, geoMercator, scaleThreshold } from "d3";
+	import tracts2020 from "../data/2020.geo.json";
 
-	export var year;
-	export var tracts;
-	export var colours;
-	export var type;
-	export var variable;
-
-	$: console.log(type);
-
-	const avgInc = {
-		"1960": 4307,
-		"1970": 11748,
-		"1980": 27476,
-		"1990": 54601,
-		"2000": 69125,
-		"2010": 87038,
-		"2020": 109480 // actually 2016
-	};
+	const coloursD = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
+	
+	$: currentLayer = 'hhld_inc';
 
 	let divWidth = 800;
 	$: innerWidth = divWidth;
@@ -36,21 +23,57 @@
 		.angle([-17]);
 	$: path = geoPath(projection);
 	
-	var color = scaleThreshold()
+	const params =	{
+		"hhld_inc": {
+			"name": "Household Income",
+			"var_name": "ii16",
+			"colours": coloursD,
+			"ref_point": 102721 
+		},	
+		"ind_inc": {
+			"name": "Individual Income",
+			"var_name": "ih16",
+			"colours": coloursD,
+			"ref_point": 52268
+		},
+		"pov_lim": {
+			"name": "Poverty Rate LIM",
+			"var_name": "l16",
+			"colours": coloursD,
+			"ref_point": 16.3
+			// 26.3
+		}
+	}
+
+	$: colorDiv = scaleThreshold()
 		.domain([
-			avgInc[year] * 0.7,
-			avgInc[year] * 0.85,
-			avgInc[year] * 1.15,
-			avgInc[year] * 1.3,
+			params[currentLayer]["ref_point"] * 0.7,
+			params[currentLayer]["ref_point"] * 0.85,
+			params[currentLayer]["ref_point"] * 1.15,
+			params[currentLayer]["ref_point"] * 1.3,
 		])
-		.range(colours);
+		.range(coloursD);
 
-	$: tracts.map((item) => {
-		item.properties[variable]
-			? (item.properties.color = color(item.properties[variable]))
-			: (item.properties.color = "white");
+	$: attributeName = params[currentLayer]["var_name"]
+
+	$: features = tracts2020.features;
+		
+	$: features.map(item => {
+	item.properties[attributeName]	
+		? (item.properties.color = colorDiv(item.properties[attributeName]))
+		: (item.properties.color = "white");
 	});
-
+	
+	function handleClick() {
+		console.log("meow");
+		// features.map(item => {
+		// item.properties[attributeName]	
+		// 	? (item.properties.color = colorDiv(item.properties[attributeName]))
+		// 	: (item.properties.color = "white");
+		// });
+		console.log(features[4].properties.color);
+	}
+	
 	$: placeLabel = true;
 	function labelToggle() {
 		placeLabel = !placeLabel;
@@ -59,6 +82,26 @@
 		placeLabel = false
 	}
 </script>
+
+<div class="layer-button-wrapper">
+	<button 
+	on:click="{handleClick}"
+	class:selected="{currentLayer === 'pov_lim'}"
+	class:not-selected="{currentLayer !== 'pov_lim'}"
+	on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+
+	<button 
+	on:click="{handleClick}"
+	class:selected="{currentLayer === 'hhld_inc'}"
+	class:not-selected="{currentLayer !== 'hhld_inc'}"
+	on:click="{() => currentLayer = 'hhld_inc'}"
+	id="hhld_inc">Average Household Income</button>
+
+	<button 
+	class:selected="{currentLayer === 'ind_inc'}"
+	class:not-selected="{currentLayer !== 'ind_inc'}"
+	on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
+</div>
 
 <div id="container" class="svg-container" bind:offsetWidth={divWidth}>
 
@@ -72,13 +115,15 @@
 		</button>		
 	</div>
 
-	<svg width={innerWidth} height={height} id="meow">
+	<svg width={innerWidth} height={height}	>
 		{#each formerMun.features as data}
 			<path id="fm-back" d={path(data)} />
 		{/each}
-		{#each tracts as data}
+		{#key attributeName}
+		{#each features	as data}
 			<path id="ct" d={path(data)} fill={data.properties.color} />
 		{/each}
+		{/key}
 		{#each formerMun.features as data}
 			<path id="fm" d={path(data)} />
 		{/each}
@@ -99,11 +144,9 @@
 			<text id="place-label" x="301" y="88">North York</text>
 			<text id="place-label" x="389" y="243">East York</text>
 			<text id="place-label" x="227" y="207">York</text>
-
 			<text id="place-label" x="89" y="228">Etobicoke</text>
 			<text id="place-label" x="519" y="163">Scarborough</text>
 			<text id="place-label" x="297" y="287">Toronto</text>
-			
 		{/if}
 	</svg>
 	

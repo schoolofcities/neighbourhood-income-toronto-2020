@@ -1,7 +1,7 @@
 <script>
 
 	import Top from "./lib/TopSofC.svelte";
-	import Map from "./lib/MapTop.svelte";
+	import MapTop from "./lib/MapTop.svelte";
 	import MapMini from "./lib/MapMini.svelte";
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
@@ -12,11 +12,9 @@
 	import inc2020 from "./data/2020.geo.json";
 
 
-	let colours = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
+	let coloursDiv = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
 	let spacing = [50, 100, 150, 200, 250]
-
-	$: currentLayer = 'hhld_inc';
-
+	
 </script>
 
 <svelte:head>
@@ -47,7 +45,7 @@
 		<div class="circles">
 			<svg>
 			  {#each [0,1,2,3,4] as d}
-				<circle cx={spacing[d]} cy="10px" r=10 fill={colours[d]} stroke= "white" stroke-width="2px" />
+				<circle cx={spacing[d]} cy="10px" r=10 fill={coloursDiv[d]} stroke= "white" stroke-width="2px" />
 			  {/each}
 			</svg>
 		</div>
@@ -60,28 +58,9 @@
 	<div class="text">
 		<p>On. Here's a map of the City of Toronto showing three pertinent variables</p>
 	</div>
-
-	<div class="layer-button-wrapper">
-		<button 
-		class:selected="{currentLayer === 'hhld_inc'}"
-		class:not-selected="{currentLayer !== 'hhld_inc'}"
-		on:click="{() => currentLayer = 'hhld_inc'}"
-		id="hhld_inc">Average Household Income</button>
-		
-		<button 
-		class:selected="{currentLayer === 'ind_inc'}"
-		class:not-selected="{currentLayer !== 'ind_inc'}"
-		on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
-		
-		<button 
-		class:selected="{currentLayer === 'pov_lim'}"
-		class:not-selected="{currentLayer !== 'pov_lim'}"
-		on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
-	</div>
 	
 	<div class="mapBig">
-		<Map year={"2020"}
-		tracts={inc2020.features} colours = {colours} type={currentLayer} variable={"ii16"}/>
+		<MapTop/>
 	</div>
 	
 
@@ -92,25 +71,25 @@
 
 	<div class="mapGrid">
 		<div class="mapSmall">
-			<MapMini year={"1960"} tracts={inc1960.features} colours = {colours}  variable={"avg_inc"}/>
+			<MapMini year={"1960"} tracts={inc1960.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<MapMini year={"1970"} tracts={inc1970.features} colours = {colours}  variable={"avg_inc"}/>
+			<MapMini year={"1970"} tracts={inc1970.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<MapMini year={"1980"} tracts={inc1980.features} colours = {colours}  variable={"avg_inc"}/>
+			<MapMini year={"1980"} tracts={inc1980.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div><div class="mapSmall">
-			<MapMini year={"1990"} tracts={inc1990.features} colours = {colours}  variable={"avg_inc"}/>
+			<MapMini year={"1990"} tracts={inc1990.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<MapMini year={"2000"} tracts={inc2000.features} colours = {colours}  variable={"avg_inc"}/>
+			<MapMini year={"2000"} tracts={inc2000.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<MapMini year={"2010"} tracts={inc2010.features} colours = {colours}  variable={"avg_inc"}/>
+			<MapMini year={"2010"} tracts={inc2010.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
-		<div class="mapSmall">
-			<MapMini year={"2020"} tracts={inc2020.features} colours = {colours}  variable={"ii16"}/>
-		</div>
+		<!-- <div class="mapSmall">
+			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ii16"}/>
+		</div> -->
 	</div>
 
 
