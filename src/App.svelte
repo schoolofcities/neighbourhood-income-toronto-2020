@@ -1,7 +1,7 @@
 <script>
 
 	import Top from "./lib/TopSofC.svelte";
-	import Map from "./lib/Map.svelte";
+	import Map from "./lib/MapTop.svelte";
 	import MapMini from "./lib/MapMini.svelte";
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
@@ -50,7 +50,7 @@
 			</svg>
 		</div>
 		
-		<h3>A first look at income data from the 2021 census</h3>
+		<h3>A first look at 2020 income data collected as part of the 2021 census</h3>
 		<div id="mini-line"></div>
 	</div>
 
@@ -126,7 +126,7 @@
 	main {
 		margin: 0 auto;
 		width: 100%;
-		max-width: 900px;
+		max-width: 1200px;
 		position: relative;
 	}
 
@@ -166,7 +166,7 @@
 
 	.mapBig {
 		margin: auto;
-		max-width: 810px;
+		max-width: 1210px;
 		/* border: solid 1px rgb(238, 238, 238); */
 		/* border-radius: 5px; */
 		/* border-bottom-right-radius: 200px; */

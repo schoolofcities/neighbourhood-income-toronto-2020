@@ -44,7 +44,7 @@
 </script>
 
 <div id="container" class="svg-container" bind:offsetWidth={divWidth}>
-	<svg width={innerWidth} {height} id="meow">
+	<svg width={innerWidth} {height}>
 		{#each formerMun.features as data}
 			<path id="fm-back" d={path(data)} />
 		{/each}
