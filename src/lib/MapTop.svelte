@@ -8,7 +8,7 @@
 
 	const coloursD = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
 	
-	$: currentLayer = 'hhld_inc';
+	export var currentLayer;
 
 	let divWidth = 800;
 	$: innerWidth = divWidth;
@@ -64,16 +64,6 @@
 		: (item.properties.color = "white");
 	});
 	
-	function handleClick() {
-		console.log("meow");
-		// features.map(item => {
-		// item.properties[attributeName]	
-		// 	? (item.properties.color = colorDiv(item.properties[attributeName]))
-		// 	: (item.properties.color = "white");
-		// });
-		console.log(features[4].properties.color);
-	}
-	
 	$: placeLabel = true;
 	function labelToggle() {
 		placeLabel = !placeLabel;
@@ -83,25 +73,7 @@
 	}
 </script>
 
-<div class="layer-button-wrapper">
-	<button 
-	on:click="{handleClick}"
-	class:selected="{currentLayer === 'pov_lim'}"
-	class:not-selected="{currentLayer !== 'pov_lim'}"
-	on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
 
-	<button 
-	on:click="{handleClick}"
-	class:selected="{currentLayer === 'hhld_inc'}"
-	class:not-selected="{currentLayer !== 'hhld_inc'}"
-	on:click="{() => currentLayer = 'hhld_inc'}"
-	id="hhld_inc">Average Household Income</button>
-
-	<button 
-	class:selected="{currentLayer === 'ind_inc'}"
-	class:not-selected="{currentLayer !== 'ind_inc'}"
-	on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
-</div>
 
 <div id="container" class="svg-container" bind:offsetWidth={divWidth}>
 
