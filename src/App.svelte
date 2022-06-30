@@ -15,6 +15,8 @@
 	let colours = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
 	let spacing = [50, 100, 150, 200, 250]
 
+	$: currentLayer = 'hhld_inc';
+
 </script>
 
 <svelte:head>
@@ -59,10 +61,27 @@
 		<p>On. Here's a map of the City of Toronto showing three pertinent variables</p>
 	</div>
 
+	<div class="layer-button-wrapper">
+		<button 
+		class:selected="{currentLayer === 'hhld_inc'}"
+		class:not-selected="{currentLayer !== 'hhld_inc'}"
+		on:click="{() => currentLayer = 'hhld_inc'}"
+		id="hhld_inc">Average Household Income</button>
+		
+		<button 
+		class:selected="{currentLayer === 'ind_inc'}"
+		class:not-selected="{currentLayer !== 'ind_inc'}"
+		on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
+		
+		<button 
+		class:selected="{currentLayer === 'pov_lim'}"
+		class:not-selected="{currentLayer !== 'pov_lim'}"
+		on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+	</div>
 	
 	<div class="mapBig">
-		<Map year={"2010"}
-		tracts={inc2010.features} colours = {colours} type={"main"} variable={"avg_inc"}/>
+		<Map year={"2020"}
+		tracts={inc2020.features} colours = {colours} type={currentLayer} variable={"ii16"}/>
 	</div>
 	
 
@@ -164,12 +183,37 @@
 		line-height: 160%;
 	}
 
+	.layer-button-wrapper {
+		margin: auto;
+		max-width: 600px;
+		width: 100%;
+	}
+	.layer-button-wrapper button {
+		border: solid 1px rgb(176, 176, 176);
+		font-family: 	-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,	 Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		cursor: pointer;
+		border-radius: 1px;
+		padding: 4px;
+		/* background-color: #f2dfce; */
+	}
+	.selected {
+		background-color: #ffffff;
+		color: rgb(22, 22, 22);;
+	}
+	.not-selected {
+		background-color: #f2dfce;
+		color: rgb(103, 103, 103);
+	}
+	.layer-button-wrapper button:hover {
+		color: #007fa3;
+	}
+
 	.mapBig {
 		margin: auto;
-		max-width: 1210px;
-		/* border: solid 1px rgb(238, 238, 238); */
-		/* border-radius: 5px; */
-		/* border-bottom-right-radius: 200px; */
+		max-width: 810px;
+		border: solid 1px rgb(238, 238, 238);
+		border-radius: 5px; 
+		border-bottom-right-radius: 200px;
 	}
 
 	.mapGrid {
