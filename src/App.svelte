@@ -48,8 +48,11 @@
 <main>
 
 	<div class="title">
+
 		<div id="mini-line"></div>
+
 		<h1>Wealth inequalities and poverty concentration in Toronto</h1>
+
 		<div class="circles">
 			<svg>
 			  {#each [0,1,2,3,4] as d}
@@ -59,8 +62,13 @@
 		</div>
 		
 		<h3>A first look at 2020 income data collected as part of the 2021 census</h3>
+		<br>
+
 		<div id="mini-line"></div>
+
 	</div>
+	
+	
 
 
 	<div class="text">
@@ -109,7 +117,7 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>For the six decades prior, clearly showing how lower-income neighbourhoods were once clustered in the centre.</p>
+		<p>The spatial patterns of wealth and poverty in the city have not always looked this way. Here are maps showing average household income for each the six decades prior to 2020. These clearly show how lower-income neighbourhoods were once clustered in the centre, but have slowly formed in more suburban neighbourhoods, paticularly in the northeast and northwest of the city. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
 	</div>
 
 
@@ -144,13 +152,18 @@
 	</div>
 
 
+
+
+	<div id="mini-line"></div>
+
 	<div class="text">
 		<p>Indeed meow meow</p>
 	</div>
 
 	<div id="mini-line"></div>
 
-	<div class="text">
+	<div class="info">
+		<h3>More information</h3>
 		<p>Indeed meow meow</p>
 	</div>
 
@@ -175,6 +188,7 @@
 	main {
 		margin: 0 auto;
 		width: 100%;
+		min-width: 350px;
 		max-width: 1200px;
 		position: relative;
 	}
@@ -215,17 +229,27 @@
 		font-family: "Source Serif Pro", serif;
 		font-size: 17px;
 		margin: auto;
-		max-width: 440px;
-		width: 100%;
-		padding-top: 25px;
-		padding-bottom: 25px;
+		max-width: 594px;
+		width: calc(100% - 50px);
+		padding: 25px;
 		line-height: 160%;
+		text-align: left;
+	}
+	a {
+		text-decoration: none;
+		color: #007fa3;
 	}
 
 	.layer-button-wrapper {
 		margin: auto;
 		max-width: 600px;
 		width: 100%;
+	}
+	@media (max-width:620px) {
+		.layer-button-wrapper {
+			padding-left: 25px;
+			width: calc(100% - 25px);
+		}
 	}
 	.layer-button-wrapper button {
 		border: solid 1px rgb(176, 176, 176);
@@ -270,6 +294,9 @@
 		}
 	}
 
+	.big-number-box {
+		margin: auto;
+	}
 	.legend {
 		margin: auto;
 		max-width: 300px;

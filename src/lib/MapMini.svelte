@@ -65,7 +65,7 @@
 	#container {
 		width: 100%;
 		max-width: 800px;
-		min-width: 400px;
+		/* min-width: 400px; */
 	}
 
 	#fm-back {

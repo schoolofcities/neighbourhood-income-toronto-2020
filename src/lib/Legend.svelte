@@ -40,8 +40,8 @@
 	} 
 	else {
 		colours = coloursSeq
-		title1 = "Poverty rate based on the "
-		title2 = "Low-Income Measure (LIM)"
+		title1 = "Poverty rate by census tract based "
+		title2 = "on the Low-Income Measure (LIM)"
 		labels = [
 			"Less than 10%",
 			"10% to 20%",

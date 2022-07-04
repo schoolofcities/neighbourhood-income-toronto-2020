@@ -16,9 +16,13 @@
 
 	// let c1 = [-79.29, 43.70]
 	// let c2 = [-78.89, 43.64]
+	// [-0.001* innerWidth - 78.49, 0.00015 * innerWidth + 43.58 ]
+	let c600 = [-79.145,43.68]
+
+	
 
 	$: projection = geoMercator()
-		.center([-0.001* innerWidth - 78.49, 0.00015 * innerWidth + 43.58 ])
+		.center([-78.17 - 0.0023*innerWidth + 0.000001125*innerWidth**2, 43.5 + 0.00045*innerWidth - 2.5e-7*innerWidth**2])
 		.scale([75000 * innerWidth / 800])
 		.angle([-17]);
 	$: path = geoPath(projection);
@@ -135,7 +139,7 @@
 	#container {
 		width: 100%;
 		max-width: 800px;
-		min-width: 400px;
+		/* min-width: 400px; */
 	}
 	#fm-back {
 		stroke: rgb(0, 0, 0);
