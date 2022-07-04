@@ -13,10 +13,11 @@
 
 
 	let coloursDiv = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
+	let coloursSeq = ['#f2dfce','#ecb4a2','#e5816f','#dc4633','#ed1b00']
 	let spacing = [50, 100, 150, 200, 250]
 
 	$: currentLayer = "hhld_inc";	
-	
+
 </script>
 
 <svelte:head>
@@ -81,7 +82,7 @@
 	</div>
 	
 	<div class="mapBig">
-		<MapTop currentLayer={currentLayer}/>
+		<MapTop coloursD = {coloursDiv} coloursS = {coloursSeq} currentLayer={currentLayer}/>
 	</div>
 	
 
@@ -108,9 +109,9 @@
 		<div class="mapSmall">
 			<MapMini year={"2010"} tracts={inc2010.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
-		<!-- <div class="mapSmall">
+		<div class="mapSmall">
 			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ii16"}/>
-		</div> -->
+		</div>
 	</div>
 
 

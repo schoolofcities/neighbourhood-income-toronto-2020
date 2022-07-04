@@ -6,8 +6,8 @@
 	import { geoPath, geoMercator, scaleThreshold } from "d3";
 	import tracts2020 from "../data/2020.geo.json";
 
-	const coloursD = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
-	
+	export var coloursD;	
+	export var coloursS;
 	export var currentLayer;
 
 	let divWidth = 800;
@@ -39,13 +39,15 @@
 		"pov_lim": {
 			"name": "Poverty Rate LIM",
 			"var_name": "l16",
-			"colours": coloursD,
+			"colours": coloursS,
 			"ref_point": 16.3
 			// 26.3
 		}
 	}
 
-	$: colorDiv = scaleThreshold()
+	$: colorDiv = [];
+	$: if (currentLayer !== "pov_lim") {
+		colorDiv = scaleThreshold()
 		.domain([
 			params[currentLayer]["ref_point"] * 0.7,
 			params[currentLayer]["ref_point"] * 0.85,
@@ -53,6 +55,11 @@
 			params[currentLayer]["ref_point"] * 1.3,
 		])
 		.range(coloursD);
+	} else {
+		colorDiv = scaleThreshold()
+		.domain([10,20,30,40])
+		.range(coloursS);
+	}
 
 	$: attributeName = params[currentLayer]["var_name"]
 
@@ -60,8 +67,8 @@
 		
 	$: features.map(item => {
 	item.properties[attributeName]	
-		? (item.properties.color = colorDiv(item.properties[attributeName]))
-		: (item.properties.color = "white");
+		? (item.properties.colour = colorDiv(item.properties[attributeName]))
+		: (item.properties.colour = "white");
 	});
 	
 	$: placeLabel = true;
@@ -93,7 +100,7 @@
 		{/each}
 		{#key attributeName}
 		{#each features	as data}
-			<path id="ct" d={path(data)} fill={data.properties.color} />
+			<path id="ct" d={path(data)} fill={data.properties.colour} />
 		{/each}
 		{/key}
 		{#each formerMun.features as data}
