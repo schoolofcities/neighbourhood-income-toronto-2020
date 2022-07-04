@@ -13,9 +13,13 @@
 	import inc2020 from "./data/2020.geo.json";
 
 
-	let coloursDiv = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"]
-	let coloursSeq = ['#f2dfce','#ecb4a2','#e5816f','#dc4633','#ed1b00']
+	let coloursDiv = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"];
+	let coloursSeq = ['#f2dfce','#ecb4a2','#e5816f','#dc4633','#ed1b00'];
 	let spacing = [50, 100, 150, 200, 250]
+
+	const avg_hhld_inc_2020 = 110000;
+	const avg_ind_inc_2020 = 60000;
+	const pov_lim_2020 = 18;	
 
 	$: currentLayer = "hhld_inc";	
 
@@ -63,30 +67,54 @@
 		<p>On. Here's a map of the City of Toronto showing three pertinent variables</p>
 	</div>
 
+	<div id="top-map">
+		<div class="layer-button-wrapper">
+			<button 
+			class:selected="{currentLayer === 'hhld_inc'}"
+			class:not-selected="{currentLayer !== 'hhld_inc'}"
+			on:click="{() => currentLayer = 'hhld_inc'}"
+			id="hhld_inc">Average Household Income</button>
+		
+			<button 
+			class:selected="{currentLayer === 'ind_inc'}"
+			class:not-selected="{currentLayer !== 'ind_inc'}"
+			on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
 
-	<div class="layer-button-wrapper">
-		<button 
-		class:selected="{currentLayer === 'hhld_inc'}"
-		class:not-selected="{currentLayer !== 'hhld_inc'}"
-		on:click="{() => currentLayer = 'hhld_inc'}"
-		id="hhld_inc">Average Household Income</button>
-	
-		<button 
-		class:selected="{currentLayer === 'ind_inc'}"
-		class:not-selected="{currentLayer !== 'ind_inc'}"
-		on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
-
-		<button 
-		class:selected="{currentLayer === 'pov_lim'}"
-		class:not-selected="{currentLayer !== 'pov_lim'}"
-		on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+			<button 
+			class:selected="{currentLayer === 'pov_lim'}"
+			class:not-selected="{currentLayer !== 'pov_lim'}"
+			on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+		</div>
+		
+		<div class="mapBig">
+			<MapTop coloursD = {coloursDiv} coloursS = {coloursSeq} currentLayer={currentLayer}/>
+		</div>
 	</div>
-	
-	<div class="mapBig">
-		<MapTop coloursD = {coloursDiv} coloursS = {coloursSeq} currentLayer={currentLayer}/>
-	</div>
-	
 
+	<div class="top-info">
+		<div class="legend">
+			<Legend 
+				colours = {coloursDiv}
+				title1 = {"Census tract average household income relative"}
+				title2 = {"to the City of Toronto's average for the year:"}
+				labels = {[
+					"Very Low Income (less than 70%)",
+					"Low Income (70% to 85%)",
+					"Middle Income (85% to 115%)",
+					"High Income (115% to 130%)",
+					"Very High Income (more than 130%)"
+				]}	
+			/>
+		</div>
+		<div class="big-number-box">
+			<div class="big-number">
+				<div class="big-number-number">$	{avg_hhld_inc_2020.toLocaleString("en-US")}</div>
+				<div class="big-number-label">Average Household Income</div>
+			</div>
+		</div>
+	</div>
+
+	
 	<div class="text">
 		<p>For the six decades prior, clearly showing how lower-income neighbourhoods were once clustered in the centre.</p>
 	</div>
@@ -113,7 +141,7 @@
 		<div class="mapSmall">
 			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ii16"}/>
 		</div>
-		<div class="mapSmall">
+		<div class="legend">
 			<Legend 
 				colours = {coloursDiv}
 				title1 = {"Census tract average household income relative"}
@@ -124,7 +152,7 @@
 					"Middle Income (85% to 115%)",
 					"High Income (115% to 130%)",
 					"Very High Income (more than 130%)"
-				]}
+				]}	
 			/>
 		</div>
 	</div>
@@ -232,6 +260,20 @@
 		border-bottom-right-radius: 200px;
 	}
 
+	.top-info {
+		margin: auto;
+		max-width: 820px;
+		width: 100%;
+		display: grid;
+		gap: 10px 10px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.legend {
+		margin: auto;
+		max-width: 400px;
+	}
+
 	.mapGrid {
 		margin: auto;
 		max-width: 820px;
@@ -255,5 +297,7 @@
 		border-radius: 10px;
 		border-bottom-right-radius: 100px;
 	}
+
+	
 	
 </style>
