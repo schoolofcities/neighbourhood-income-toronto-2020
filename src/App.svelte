@@ -21,8 +21,8 @@
 	const avg_ind_inc_2020 = 60000;
 	const pov_lim_2020 = 18.2;	
 
-	$: currentLayer = "hhld_inc";	
-
+	$: currentLayer = "hhld_inc";
+	
 </script>
 
 <svelte:head>
@@ -107,9 +107,9 @@
 			/>
 		</div>
 		<div class="big-number-box">
-			<BigNumber number={"$" + avg_hhld_inc_2020.toLocaleString("en-US")} label={"Average Household Income"}/>
-			<BigNumber number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
-			<BigNumber number={pov_lim_2020 + "%"} label={"Poverty Rate (LIM)"}/>
+			<BigNumber type = {"hhld_inc" === currentLayer} number={"$" + avg_hhld_inc_2020.toLocaleString("en-US")} label={"Average Household Income"}/>
+			<BigNumber type = {"ind_inc" === currentLayer} number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
+			<BigNumber type = {"pov_lim" === currentLayer} number={pov_lim_2020 + "%"} label={"Poverty Rate (LIM)"}/>
 		</div>
 	</div>
 

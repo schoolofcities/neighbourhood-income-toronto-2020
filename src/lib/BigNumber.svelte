@@ -2,10 +2,14 @@
 
 	export var number;
 	export var label;
+	export var type;
+
+	$: colour = "black";	
+	$: type ? colour = "black" : colour = "rgb(66, 66, 66)";
 
 </script>
 
-<div class="big-number">
+<div class="big-number" style="color:{colour}">
 	<div class="big-number-number">{number}</div>
 	<div class="big-number-label">{label}</div>
 </div>
