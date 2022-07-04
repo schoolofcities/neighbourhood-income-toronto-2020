@@ -3,7 +3,8 @@
 	import Top from "./lib/TopSofC.svelte";
 	import MapTop from "./lib/MapTop.svelte";
 	import MapMini from "./lib/MapMini.svelte";
-	import Legend from "./lib/Legend.svelte"
+	import BigNumber from "./lib/BigNumber.svelte";
+	import Legend from "./lib/Legend.svelte";
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
 	import inc1980 from "./data/1980.geo.json";
@@ -12,14 +13,13 @@
 	import inc2010 from "./data/2010.geo.json";
 	import inc2020 from "./data/2020.geo.json";
 
-
 	let coloursDiv = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"];
 	let coloursSeq = ['#f2dfce','#ecb4a2','#e5816f','#dc4633','#ed1b00'];
 	let spacing = [50, 100, 150, 200, 250]
 
 	const avg_hhld_inc_2020 = 110000;
 	const avg_ind_inc_2020 = 60000;
-	const pov_lim_2020 = 18;	
+	const pov_lim_2020 = 18.2;	
 
 	$: currentLayer = "hhld_inc";	
 
@@ -107,14 +107,16 @@
 			/>
 		</div>
 		<div class="big-number-box">
-			<div class="big-number">
-				<div class="big-number-number">$	{avg_hhld_inc_2020.toLocaleString("en-US")}</div>
-				<div class="big-number-label">Average Household Income</div>
-			</div>
+			<BigNumber number={"$" + avg_hhld_inc_2020.toLocaleString("en-US")} label={"Average Household Income"}/>
+			<BigNumber number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
+			<BigNumber number={pov_lim_2020 + "%"} label={"Poverty Rate (LIM)"}/>
 		</div>
+
+		
 	</div>
 
-	
+	<div id="mini-line"></div>
+
 	<div class="text">
 		<p>For the six decades prior, clearly showing how lower-income neighbourhoods were once clustered in the centre.</p>
 	</div>
@@ -209,6 +211,15 @@
 		font-family: "Source Serif Pro", serif;
 	}
 
+	.title h1 {
+		font-weight: normal;
+		font-size: 40px;
+	}
+	.title h3 {
+		font-weight: normal;
+		font-size: 20px;
+	}
+
 	#mini-line {
 		margin: auto;
 		width: 220px;
@@ -218,9 +229,9 @@
 
 	.text {
 		font-family: "Source Serif Pro", serif;
-		font-size: 19px;
+		font-size: 17px;
 		margin: auto;
-		max-width: 600px;
+		max-width: 440px;
 		width: 100%;
 		padding-top: 25px;
 		padding-bottom: 25px;
@@ -234,7 +245,7 @@
 	}
 	.layer-button-wrapper button {
 		border: solid 1px rgb(176, 176, 176);
-		font-family: 	-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,	 Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,	 Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		cursor: pointer;
 		border-radius: 1px;
 		padding: 4px;
