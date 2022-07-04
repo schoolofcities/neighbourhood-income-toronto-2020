@@ -153,17 +153,12 @@
 
 
 
-	<div id="mini-line"></div>
-
-	<div class="text">
-		<p>Indeed meow meow</p>
-	</div>
 
 	<div id="mini-line"></div>
 
 	<div class="info">
-		<h3>More information</h3>
-		<p>Indeed meow meow</p>
+		<h3>More Information</h3>
+		<p>This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a>. The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>, housed through the Univeristy of Toronto. The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a></p>
 	</div>
 
 </main>
@@ -307,6 +302,7 @@
 
 	.mapGrid {
 		margin: auto;
+		padding-bottom: 42px;
 		max-width: 820px;
 		width: 100%;
 		display: grid;
@@ -331,6 +327,16 @@
 		border-bottom-right-radius: 100px;
 	}
 
+	.info {
+		font-family: "Source Serif Pro", serif;
+		font-size: 14px;
+		margin: auto;
+		max-width: 494px;
+		width: calc(100% - 50px);
+		padding: 25px;
+		line-height: 160%;
+		text-align: left;
+	}
 	
 	
 </style>
