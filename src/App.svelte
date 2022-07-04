@@ -111,8 +111,6 @@
 			<BigNumber number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
 			<BigNumber number={pov_lim_2020 + "%"} label={"Poverty Rate (LIM)"}/>
 		</div>
-
-		
 	</div>
 
 	<div id="mini-line"></div>
@@ -273,16 +271,22 @@
 
 	.top-info {
 		margin: auto;
-		max-width: 820px;
+		max-width: 620px;
 		width: 100%;
 		display: grid;
 		gap: 10px 10px;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+	@media (max-width:620px) {
+		.top-info {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
 	.legend {
 		margin: auto;
-		max-width: 400px;
+		max-width: 300px;
 	}
 
 	.mapGrid {
