@@ -17,13 +17,13 @@
 		"2020": 102721 , // actually 2016
 	};
 
-	let divWidth = 800;
+	let divWidth = 400;
 	$: innerWidth = divWidth;
 	$: height = (innerWidth * 40) / 80;
 
 	$: projection = geoMercator()
-		.center([-78.91, 43.64])
-		.scale([38000])
+		.center([-78.17 - 0.0023*innerWidth + 0.000001125*innerWidth**2, 43.5 + 0.00045*innerWidth - 2.5e-7*innerWidth**2])
+		.scale([76000 * innerWidth / 800])
 		.angle([-17]);
 	$: path = geoPath(projection);
 
@@ -63,9 +63,8 @@
 
 <style>
 	#container {
+		max-width: 400px;
 		width: 100%;
-		max-width: 800px;
-		/* min-width: 400px; */
 	}
 
 	#fm-back {

@@ -54,7 +54,7 @@
 	
 </script>
 
-<svg width="400" height="200">
+<svg width="300" height="200">
 	<text class="legend-title" x="8" y="22">{title1} </text>
 	<text class="legend-title" x="8" y="38">{title2}</text>
 

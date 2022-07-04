@@ -43,7 +43,7 @@
 
 
 
-<Top />
+<Top/>
 
 <main>
 
@@ -153,7 +153,6 @@
 
 
 
-
 	<div id="mini-line"></div>
 
 	<div class="text">
@@ -188,7 +187,7 @@
 	main {
 		margin: 0 auto;
 		width: 100%;
-		min-width: 350px;
+		min-width: 420px;
 		max-width: 1200px;
 		position: relative;
 	}
@@ -203,7 +202,9 @@
 	.title {
 		margin: auto;
 		max-width: 600px;
-		width: 100%;
+		width: calc(100% - 50px);
+		padding-left: 25px;
+		padding-right: 25px;
 		margin-top: 100px;
 		text-align: center;
 		font-family: "Source Serif Pro", serif;
@@ -281,21 +282,23 @@
 
 	.top-info {
 		margin: auto;
-		max-width: 620px;
-		width: 100%;
+		width: 580px;
+		overflow: hidden;
 		display: grid;
-		gap: 10px 10px;
+		gap: 0px 0px;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	@media (max-width:620px) {
+	@media (max-width:580px) {
 		.top-info {
 			grid-template-columns: repeat(1, 1fr);
+			width: 300px;
 		}
 	}
 
 	.big-number-box {
 		margin: auto;
+		margin-top: 0px;
 	}
 	.legend {
 		margin: auto;
@@ -314,6 +317,8 @@
 	@media (max-width:820px) {
 		.mapGrid {
 			grid-template-columns: repeat(1, 1fr);
+			/* gap: 0px 0px; */
+			width: calc(100% - 40px);
 		}
 	}
 
