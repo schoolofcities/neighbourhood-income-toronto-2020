@@ -1,8 +1,57 @@
 <script>
-	export var colours;
-	export var title1;
-	export var title2;
-	export var labels;
+	export var layer;
+	export var coloursDiv;
+	export var coloursSeq;
+
+	$: colours = coloursDiv
+	$: title1 = "Census tract average household income relative"
+	$: title2 = "to the City of Toronto's average for the year:"
+	$: labels = [
+		"Very Low Income (less than 70%)",
+		"Low Income (70% to 85%)",
+		"Middle Income (85% to 115%)",
+		"High Income (115% to 130%)",
+		"Very High Income (more than 130%)"
+	]
+
+	$: if (layer === "ind_inc") {
+		colours = coloursDiv
+		title1 = "Census tract average individual income relative"
+		title2 = "to the City of Toronto's average for the year:"
+		labels = [
+			"Very Low Income (less than 70%)",
+			"Low Income (70% to 85%)",
+			"Middle Income (85% to 115%)",
+			"High Income (115% to 130%)",
+			"Very High Income (more than 130%)"
+		]
+	} 
+	else if (layer === "hhld_inc") {
+		colours = coloursDiv
+		title1 = "Census tract average household income relative"
+		title2 = "to the City of Toronto's average for the year:"
+		labels = [
+			"Very Low Income (less than 70%)",
+			"Low Income (70% to 85%)",
+			"Middle Income (85% to 115%)",
+			"High Income (115% to 130%)",
+			"Very High Income (more than 130%)"
+		]
+	} 
+	else {
+		colours = coloursSeq
+		title1 = "Poverty rate based on the "
+		title2 = "Low-Income Measure (LIM)"
+		labels = [
+			"Less than 10%",
+			"10% to 20%",
+			"20% to 30%",
+			"30% to 40%",
+			"More than 40%"
+		]
+	}
+	
+	
 </script>
 
 <svg width="400" height="200">

@@ -92,24 +92,17 @@
 	</div>
 
 	<div class="top-info">
-		<div class="legend">
-			<Legend 
-				colours = {coloursDiv}
-				title1 = {"Census tract average household income relative"}
-				title2 = {"to the City of Toronto's average for the year:"}
-				labels = {[
-					"Very Low Income (less than 70%)",
-					"Low Income (70% to 85%)",
-					"Middle Income (85% to 115%)",
-					"High Income (115% to 130%)",
-					"Very High Income (more than 130%)"
-				]}	
-			/>
-		</div>
 		<div class="big-number-box">
 			<BigNumber type = {"hhld_inc" === currentLayer} number={"$" + avg_hhld_inc_2020.toLocaleString("en-US")} label={"Average Household Income"}/>
 			<BigNumber type = {"ind_inc" === currentLayer} number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
 			<BigNumber type = {"pov_lim" === currentLayer} number={pov_lim_2020 + "%"} label={"Poverty Rate (LIM)"}/>
+		</div>
+		<div class="legend">
+			<Legend 
+				layer = {currentLayer}
+				coloursDiv = {coloursDiv}
+				coloursSeq = {coloursSeq}
+			/>
 		</div>
 	</div>
 
@@ -143,16 +136,9 @@
 		</div>
 		<div class="legend">
 			<Legend 
-				colours = {coloursDiv}
-				title1 = {"Census tract average household income relative"}
-				title2 = {"to the City of Toronto's average for the year:"}
-				labels = {[
-					"Very Low Income (less than 70%)",
-					"Low Income (70% to 85%)",
-					"Middle Income (85% to 115%)",
-					"High Income (115% to 130%)",
-					"Very High Income (more than 130%)"
-				]}	
+				layer = {"hhld_inc"}
+				coloursDiv = {coloursDiv}
+				coloursSeq = {coloursSeq}
 			/>
 		</div>
 	</div>

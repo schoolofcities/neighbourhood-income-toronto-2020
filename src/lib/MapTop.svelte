@@ -137,10 +137,6 @@
 		max-width: 800px;
 		min-width: 400px;
 	}
-	/* #meow {
-		border: solid 1px rgb(243, 232, 232);
-		border-bottom-right-radius: 100px;
-	} */
 	#fm-back {
 		stroke: rgb(0, 0, 0);
 		stroke-width: 5px;
@@ -165,7 +161,6 @@
 	#place-label {
 		font-size: 15px;
 		fill: rgb(0, 0, 0);
-		font-weight: bold;
 		paint-order: stroke;
 		stroke: #fff;
 		stroke-opacity: 0.85;
@@ -179,15 +174,12 @@
 		position: absolute;
 		top: 25px;
 		right: 20px;
-		/* margin-right: 87px; */
-		/* background-color: white; */
 		border: solid 1px rgb(176, 176, 176);
 		font-family: 	-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,	 Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		color:  rgb(103, 103, 103);
 		cursor: pointer;
 		border-radius: 1px;
 		padding: 4px;
-		/* margin-bottom: -10px; */
 	}
 	#label-button:hover {
 		color: #007fa3;
