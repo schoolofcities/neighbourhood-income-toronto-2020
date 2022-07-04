@@ -3,6 +3,7 @@
 	import Top from "./lib/TopSofC.svelte";
 	import MapTop from "./lib/MapTop.svelte";
 	import MapMini from "./lib/MapMini.svelte";
+	import Legend from "./lib/Legend.svelte"
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
 	import inc1980 from "./data/1980.geo.json";
@@ -111,6 +112,20 @@
 		</div>
 		<div class="mapSmall">
 			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ii16"}/>
+		</div>
+		<div class="mapSmall">
+			<Legend 
+				colours = {coloursDiv}
+				title1 = {"Census tract average household income relative"}
+				title2 = {"to the City of Toronto's average for the year:"}
+				labels = {[
+					"Very Low Income (less than 70%)",
+					"Low Income (70% to 85%)",
+					"Middle Income (85% to 115%)",
+					"High Income (115% to 130%)",
+					"Very High Income (more than 130%)"
+				]}
+			/>
 		</div>
 	</div>
 
