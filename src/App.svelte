@@ -6,6 +6,7 @@
 	import MapMini from "./lib/MapMini.svelte";
 	import BigNumber from "./lib/BigNumber.svelte";
 	import Legend from "./lib/Legend.svelte";
+	import LegendDiff from "./lib/LegendDiff.svelte";
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
 	import inc1980 from "./data/1980.geo.json";
@@ -115,18 +116,19 @@
 		</div>
 	</div>
 
+
+
+
+
+
+	
 	<div id="mini-line"></div>
 
 	<div class="text">
 		<p>But how did this change from the 2016 census? (2015 yearly income data). The following map shows the percent difference in neighbourhood income. The blue areas indicate an increase and the red areas indicate a decrease</p>
 	</div>
 
-
-	<div class="dif-legend">
-		<svg width="300" height="50"></svg>
-		<rect class="box" width="30" height = "15" x="10" y="50"></rect>
-	</div>
-
+	<LegendDiff coloursDiv={coloursDiv}/>
 
 	<div class="layer-button-wrapper">
 		<button 
@@ -160,7 +162,6 @@
 	<div class="text">
 		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Here are maps showing average household income for each the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since slowly concentrated in more suburban neighbourhoods, paticularly in the northeast and northwest of the city. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
 	</div>
-
 
 	<div class="mapGrid">
 		<div class="mapSmall">
@@ -340,6 +341,8 @@
 		margin: auto;
 		max-width: 300px;
 	}
+
+	
 
 	.mapGrid {
 		margin: auto;
