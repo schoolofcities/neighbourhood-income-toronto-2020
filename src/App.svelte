@@ -146,7 +146,7 @@
 			<MapMini year={"2010"} tracts={inc2010.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ii16"}/>
+			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ih16"}/>
 		</div>
 		<div class="legend">
 			<Legend 

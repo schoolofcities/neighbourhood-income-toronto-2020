@@ -28,13 +28,13 @@
 	const params =	{
 		"hhld_inc": {
 			"name": "Household Income",
-			"var_name": "ii16",
+			"var_name": "ih16",
 			"colours": coloursD,
 			"ref_point": 102721 
 		},	
 		"ind_inc": {
 			"name": "Individual Income",
-			"var_name": "ih16",
+			"var_name": "ii16",
 			"colours": coloursD,
 			"ref_point": 52268
 		},
