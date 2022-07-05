@@ -117,7 +117,13 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>The spatial patterns of wealth and poverty in the city have not always looked this way. Here are maps showing average household income for each the six decades prior to 2020. These clearly show how lower-income neighbourhoods were once clustered in the centre, but have slowly formed in more suburban neighbourhoods, paticularly in the northeast and northwest of the city. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
+		<p>But how did this change from the 2016 census? (2015 yearly income data). The following map shows the percent difference in neighbourhood income. The blue areas indicate an increase and the red areas indicate a decrease</p>
+	</div>
+
+	<div id="mini-line"></div>
+
+	<div class="text">
+		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Here are maps showing average household income for each the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since slowly concentrated in more suburban neighbourhoods, paticularly in the northeast and northwest of the city. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
 	</div>
 
 
@@ -158,7 +164,7 @@
 
 	<div class="info">
 		<h3>More Information</h3>
-		<p>This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a>. The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>, housed through the Univeristy of Toronto. The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a></p>
+		<p>This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a>. The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a>. See the code on <a href="https://github.com/schoolofcities/neighbourhood-income-toronto-2021">GitHub</a>.</p>
 	</div>
 
 </main>

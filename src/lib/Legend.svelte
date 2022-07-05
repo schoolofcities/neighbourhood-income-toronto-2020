@@ -64,7 +64,7 @@
 		height="15"
 		x="10"
 		y="50"
-		style="fill:{colours[0]};"
+		style="fill:{colours[4]};"
 	/>
 	<rect
 		class="box"
@@ -72,7 +72,7 @@
 		height="15"
 		x="10"
 		y="70"
-		style="fill:{colours[1]};"
+		style="fill:{colours[3]};"
 	/>
 	<rect
 		class="box"
@@ -88,7 +88,7 @@
 		height="15"
 		x="10"
 		y="110"
-		style="fill:{colours[3]};"
+		style="fill:{colours[1]};"
 	/>
 	<rect
 		class="box"
@@ -96,14 +96,14 @@
 		height="15"
 		x="10"
 		y="130"
-		style="fill:{colours[4]}"
+		style="fill:{colours[0]}"
 	/>
 
-	<text class="legend-label" x="45" y="62">{labels[0]}</text>
-	<text class="legend-label" x="45" y="82">{labels[1]}</text>
+	<text class="legend-label" x="45" y="62">{labels[4]}</text>
+	<text class="legend-label" x="45" y="82">{labels[3]}</text>
 	<text class="legend-label" x="45" y="102">{labels[2]}</text>
-	<text class="legend-label" x="45" y="122">{labels[3]}</text>
-	<text class="legend-label" x="45" y="142">{labels[4]}</text>
+	<text class="legend-label" x="45" y="122">{labels[1]}</text>
+	<text class="legend-label" x="45" y="142">{labels[0]}</text>
 </svg>
 
 <style>
