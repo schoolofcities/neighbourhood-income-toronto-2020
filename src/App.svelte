@@ -122,7 +122,10 @@
 	</div>
 
 
-
+	<div class="dif-legend">
+		<svg width="300" height="50"></svg>
+		<rect class="box" width="30" height = "15" x="10" y="50"></rect>
+	</div>
 
 
 	<div class="layer-button-wrapper">

@@ -13,11 +13,6 @@
 	$: innerWidth = divWidth;
 	$: height = innerWidth * 40/80
 
-	// let c1 = [-79.29, 43.70]
-	// let c2 = [-78.89, 43.64]
-	// [-0.001* innerWidth - 78.49, 0.00015 * innerWidth + 43.58 ]
-	// let c600 = [-79.145,43.68]
-
 	$: projection = geoMercator()
 		.center([-78.17 - 0.0023*innerWidth + 0.000001125*innerWidth**2, 43.5 + 0.00045*innerWidth - 2.5e-7*innerWidth**2])
 		.scale([75000 * innerWidth / 800])
@@ -28,17 +23,27 @@
 		.domain([-30,-15,15,30])
 		.range(coloursD);
 	
-	// $: attributeName = params[currentLayer]["var_name"]
-
 	$: features = tracts2020.features;
 		
-	$: features.map(item => {
-	item.properties["ih21"]	> 0
-		? (item.properties.colourC = colorDiv(
-			100 * (+(item.properties["ih21"]) - +(item.properties["ih16"])) / (+(item.properties["ih16"]))
-			))
-		: (item.properties.colourC = "white");
-	});
+	$: if (currentLayer === "hhld_inc") {
+		features.map(item => {
+		item.properties["ih21"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ih21"]) - +(item.properties["ih16"])) / (+(item.properties["ih16"]))))
+			: (item.properties.colourC = "white");
+		});
+	} else if (currentLayer === "ind_inc") {
+		features.map(item => {
+		item.properties["ih21"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ii21"]) - +(item.properties["ii16"])) / (+(item.properties["ii16"]))))
+			: (item.properties.colourC = "white");
+		});
+	} else {
+		features.map(item => {
+		item.properties["ih21"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["l21"]) - +(item.properties["l16"])) / (+(item.properties["l16"]))))
+			: (item.properties.colourC = "white");
+		});
+	}
 
 	$: placeLabel = true;
 	function labelToggle() {
