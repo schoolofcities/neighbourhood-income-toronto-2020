@@ -155,7 +155,7 @@
 
 
 
-
+	<div class="text"> </div>
 
 	<div id="mini-line"></div>
 

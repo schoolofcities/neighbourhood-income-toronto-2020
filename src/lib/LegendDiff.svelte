@@ -34,4 +34,10 @@
 		font-size: 13px;
 		fill: rgb(17, 17, 17);
 	}
+	@media (max-width:620px) {
+		.dif-legend {
+			padding-left: 25px;
+			width: calc(100% - 25px);
+		}
+	}
 </style>
