@@ -2,6 +2,7 @@
 
 	import Top from "./lib/TopSofC.svelte";
 	import MapTop from "./lib/MapTop.svelte";
+	import MapDiff from "./lib/MapDiff.svelte";
 	import MapMini from "./lib/MapMini.svelte";
 	import BigNumber from "./lib/BigNumber.svelte";
 	import Legend from "./lib/Legend.svelte";
@@ -119,6 +120,37 @@
 	<div class="text">
 		<p>But how did this change from the 2016 census? (2015 yearly income data). The following map shows the percent difference in neighbourhood income. The blue areas indicate an increase and the red areas indicate a decrease</p>
 	</div>
+
+
+
+
+
+	<div class="layer-button-wrapper">
+		<button 
+		class:selected="{currentLayer === 'hhld_inc'}"
+		class:not-selected="{currentLayer !== 'hhld_inc'}"
+		on:click="{() => currentLayer = 'hhld_inc'}"
+		id="hhld_inc">Average Household Income</button>
+	
+		<button 
+		class:selected="{currentLayer === 'ind_inc'}"
+		class:not-selected="{currentLayer !== 'ind_inc'}"
+		on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
+
+		<button 
+		class:selected="{currentLayer === 'pov_lim'}"
+		class:not-selected="{currentLayer !== 'pov_lim'}"
+		on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+	</div>
+
+	<div class="mapBig">
+		<MapDiff coloursD = {coloursDiv} currentLayer={currentLayer}/>
+	</div>
+
+
+
+
+
 
 	<div id="mini-line"></div>
 

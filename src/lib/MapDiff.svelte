@@ -7,7 +7,6 @@
 	import tracts2020 from "../data/2020.geo.json";
 
 	export var coloursD;	
-	export var coloursS;
 	export var currentLayer;
 
 	let divWidth = 800;
@@ -25,54 +24,22 @@
 		.angle([-17]);
 	$: path = geoPath(projection);
 	
-	const params =	{
-		"hhld_inc": {
-			"name": "Household Income",
-			"var_name": "ih21",
-			"colours": coloursD,
-			"ref_point": 102721 
-		},	
-		"ind_inc": {
-			"name": "Individual Income",
-			"var_name": "ii21",
-			"colours": coloursD,
-			"ref_point": 52268
-		},
-		"pov_lim": {
-			"name": "Poverty Rate LIM",
-			"var_name": "l21",
-			"colours": coloursS,
-			"ref_point": 16.3
-			// 26.3 ?
-		}
-	}
-
-	$: colorDiv = [];
-	$: if (currentLayer !== "pov_lim") {
-		colorDiv = scaleThreshold()
-		.domain([
-			params[currentLayer]["ref_point"] * 0.7,
-			params[currentLayer]["ref_point"] * 0.85,
-			params[currentLayer]["ref_point"] * 1.15,
-			params[currentLayer]["ref_point"] * 1.3,
-		])
+	$: colorDiv = scaleThreshold()
+		.domain([-30,-15,15,30])
 		.range(coloursD);
-	} else {
-		colorDiv = scaleThreshold()
-		.domain([10,20,30,40])
-		.range(coloursS);
-	}
-
-	$: attributeName = params[currentLayer]["var_name"]
+	
+	// $: attributeName = params[currentLayer]["var_name"]
 
 	$: features = tracts2020.features;
 		
 	$: features.map(item => {
-	item.properties[attributeName]	
-		? (item.properties.colour = colorDiv(item.properties[attributeName]))
-		: (item.properties.colour = "white");
+	item.properties["ih21"]	> 0
+		? (item.properties.colourC = colorDiv(
+			100 * (+(item.properties["ih21"]) - +(item.properties["ih16"])) / (+(item.properties["ih16"]))
+			))
+		: (item.properties.colourC = "white");
 	});
-	
+
 	$: placeLabel = true;
 	function labelToggle() {
 		placeLabel = !placeLabel;
@@ -100,9 +67,9 @@
 		{#each formerMun.features as data}
 			<path id="fm-back" d={path(data)} />
 		{/each}
-		{#key attributeName}
+		{#key currentLayer}
 		{#each features	as data}
-			<path id="ct" d={path(data)} fill={data.properties.colour} />
+			<path id="ct" d={path(data)} fill={data.properties.colourC} />
 		{/each}
 		{/key}
 		{#each formerMun.features as data}
