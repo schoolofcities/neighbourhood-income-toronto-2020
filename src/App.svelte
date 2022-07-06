@@ -126,7 +126,7 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>2020 . The following map shows the percent difference in neighbourhood income between 2020 and 2015. The blue areas indicate an increase and the red areas indicate a decrease. These show that ... ... ...</p>
+		<p>Now let's take a look at how these patterns have changed over time. The following map shows the percent difference in neighbourhood income between 2020 and 2015 (accounting for inflation). The green areas indicate an increase and the purple areas indicate a decrease. These show that ... ... ...</p>
 	</div>
 
 	<LegendDiff coloursDiv={coloursDiv2}/>
@@ -162,7 +162,7 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Here are maps showing average household income for each the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since slowly concentrated in more suburban neighbourhoods, particularly in the northeast and northwest of the city. This trend is often called the suburbanization of poverty, and QQQQQ. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
+		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Below are a series of maps showing <span id="bold">average household income</span> for each of the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since additionally concentrated in more suburban neighbourhoods, particularly in the northeast and northwest of the city, a trend often cited as a suburbanization of poverty.
 	</div>
 
 	<div class="mapGrid">
@@ -195,6 +195,11 @@
 		</div>
 	</div>
 
+	<div id="mini-line"></div>
+
+	<div class="text">
+		<p>This is just a first look at this data, more research is needed to further understand the how and why of these patterns and their changes over time.</p>
+	</div>	
 
 
 
@@ -202,8 +207,23 @@
 
 	<div class="info">
 		<h3>More Information</h3>
-		<p>This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a>. The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to 4000-8000 residents. The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a>. See the code on <a href="https://github.com/schoolofcities/neighbourhood-income-toronto-2021">GitHub</a>.</p>
+		<p>
+		This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a> at the <a href="https://www.schoolofcities.utoronto.ca/">School of Cities</a>.
+		</p>
+			
+		<p>
+		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the poverty line is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>. 
+		</p>
+		
+		<p>
+		The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a>. Code and data for this page are hosted on <a href="https://github.com/schoolofcities/neighbourhood-income-toronto-2021">GitHub</a>. For the historical maps (1960 to 2020), only average household income is shown due to a lack of data from 20th century censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a>.
+		</p>
+
+		<p>
+		For more information on the changing patterns of income in Toronto and other Canadian cities, check out resources from the <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood Change Research Partnership</a>
+		</p>
 	</div>
+
 
 </main>
 
@@ -254,7 +274,7 @@
 	}
 	.title h3 {
 		font-weight: normal;
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	#mini-line {
@@ -266,7 +286,7 @@
 
 	.text {
 		font-family: "Source Serif Pro", serif;
-		font-size: 17px;
+		font-size: 16px;
 		margin: auto;
 		max-width: 594px;
 		width: calc(100% - 50px);
@@ -342,6 +362,11 @@
 	.legend {
 		margin: auto;
 		max-width: 300px;
+	}
+
+	#bold {
+		color: #ed1b00;
+		font-weight: bold;	
 	}
 
 	.mapGrid {
