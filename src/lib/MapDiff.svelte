@@ -28,13 +28,13 @@
 	$: if (currentLayer === "hhld_inc") {
 		features.map(item => {
 		item.properties["ih21"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ih21"]) - +(item.properties["ih16"])) / (+(item.properties["ih16"]))))
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ih21"]) - +(item.properties["ih16"])* 1.0725) / (+(item.properties["ih16"])* 1.0725)))
 			: (item.properties.colourC = "white");
 		});
 	} else if (currentLayer === "ind_inc") {
 		features.map(item => {
 		item.properties["ih21"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ii21"]) - +(item.properties["ii16"])) / (+(item.properties["ii16"]))))
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ii21"]) - +(item.properties["ii16"])* 1.0725) / (+(item.properties["ii16"])* 1.0725)))
 			: (item.properties.colourC = "white");
 		});
 	} else {

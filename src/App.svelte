@@ -16,6 +16,7 @@
 	import inc2020 from "./data/2020.geo.json";
 
 	let coloursDiv = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"];
+	let coloursDiv2 = ["#316961", "#9dab9e", "#f2dfce", "#ad7ea2", "#824287"].reverse();
 	let coloursSeq = ['#f2dfce','#ecb4a2','#e5816f','#dc4633','#ed1b00'];
 	let spacing = [50, 100, 150, 200, 250]
 
@@ -63,18 +64,18 @@
 			</svg>
 		</div>
 		
-		<h3>A first look at 2020 income data collected as part of the 2021 census</h3>
+		<h3>A first look at 2020 annual income data collected as part of the 2021 census</h3>
 		<br>
 
 		<div id="mini-line"></div>
 
 	</div>
-	
+
 	
 
 
 	<div class="text">
-		<p>On. Here's a map of the City of Toronto showing three pertinent variables</p>
+		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create neighbourhood-level maps of the City of Toronto showing where wealth and poverty are concentrated. These highlight ... ... ...</p>
 	</div>
 
 	<div id="top-map">
@@ -125,10 +126,10 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>But how did this change from the 2016 census? (2015 yearly income data). The following map shows the percent difference in neighbourhood income. The blue areas indicate an increase and the red areas indicate a decrease</p>
+		<p>2020 . The following map shows the percent difference in neighbourhood income between 2020 and 2015. The blue areas indicate an increase and the red areas indicate a decrease. These show that ... ... ...</p>
 	</div>
 
-	<LegendDiff coloursDiv={coloursDiv}/>
+	<LegendDiff coloursDiv={coloursDiv2}/>
 
 	<div class="layer-button-wrapper">
 		<button 
@@ -150,7 +151,7 @@
 	</div>
 
 	<div class="mapBig">
-		<MapDiff coloursD = {coloursDiv} currentLayer={currentLayer}/>
+		<MapDiff coloursD = {coloursDiv2} currentLayer={currentLayer}/>
 	</div>
 
 
@@ -161,7 +162,7 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Here are maps showing average household income for each the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since slowly concentrated in more suburban neighbourhoods, particularly in the northeast and northwest of the city. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
+		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Here are maps showing average household income for each the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since slowly concentrated in more suburban neighbourhoods, particularly in the northeast and northwest of the city. This trend is often called the suburbanization of poverty, and QQQQQ. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
 	</div>
 
 	<div class="mapGrid">
@@ -201,7 +202,7 @@
 
 	<div class="info">
 		<h3>More Information</h3>
-		<p>This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a>. The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a>. See the code on <a href="https://github.com/schoolofcities/neighbourhood-income-toronto-2021">GitHub</a>.</p>
+		<p>This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a>. The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to 4000-8000 residents. The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a>. See the code on <a href="https://github.com/schoolofcities/neighbourhood-income-toronto-2021">GitHub</a>.</p>
 	</div>
 
 </main>
