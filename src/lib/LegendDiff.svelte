@@ -1,7 +1,5 @@
 <script>
-
 	export var coloursDiv;
-
 </script>
 
 <div class="dif-legend">

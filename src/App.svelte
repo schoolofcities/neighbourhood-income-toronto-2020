@@ -80,6 +80,11 @@
 	<div id="top-map">
 		<div class="layer-button-wrapper">
 			<button 
+			class:selected="{currentLayer === 'pov_lim'}"
+			class:not-selected="{currentLayer !== 'pov_lim'}"
+			on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+
+			<button 
 			class:selected="{currentLayer === 'hhld_inc'}"
 			class:not-selected="{currentLayer !== 'hhld_inc'}"
 			on:click="{() => currentLayer = 'hhld_inc'}"
@@ -89,11 +94,6 @@
 			class:selected="{currentLayer === 'ind_inc'}"
 			class:not-selected="{currentLayer !== 'ind_inc'}"
 			on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
-
-			<button 
-			class:selected="{currentLayer === 'pov_lim'}"
-			class:not-selected="{currentLayer !== 'pov_lim'}"
-			on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
 		</div>
 		
 		<div class="mapBig">
@@ -132,6 +132,11 @@
 
 	<div class="layer-button-wrapper">
 		<button 
+		class:selected="{currentLayer === 'pov_lim'}"
+		class:not-selected="{currentLayer !== 'pov_lim'}"
+		on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+
+		<button 
 		class:selected="{currentLayer === 'hhld_inc'}"
 		class:not-selected="{currentLayer !== 'hhld_inc'}"
 		on:click="{() => currentLayer = 'hhld_inc'}"
@@ -142,10 +147,6 @@
 		class:not-selected="{currentLayer !== 'ind_inc'}"
 		on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
 
-		<button 
-		class:selected="{currentLayer === 'pov_lim'}"
-		class:not-selected="{currentLayer !== 'pov_lim'}"
-		on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
 	</div>
 
 	<div class="mapBig">
@@ -160,7 +161,7 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Here are maps showing average household income for each the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since slowly concentrated in more suburban neighbourhoods, paticularly in the northeast and northwest of the city. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
+		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Here are maps showing average household income for each the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since slowly concentrated in more suburban neighbourhoods, particularly in the northeast and northwest of the city. <a href="http://neighbourhoodchange.ca/cities/toronto/">Neighbourhood change</a></p>
 	</div>
 
 	<div class="mapGrid">
@@ -246,7 +247,6 @@
 		text-align: center;
 		font-family: "Source Serif Pro", serif;
 	}
-
 	.title h1 {
 		font-weight: normal;
 		font-size: 40px;
@@ -295,6 +295,7 @@
 		cursor: pointer;
 		border-radius: 1px;
 		padding: 4px;
+		margin-top: 4px;
 		/* background-color: #f2dfce; */
 	}
 	.selected {
@@ -341,8 +342,6 @@
 		margin: auto;
 		max-width: 300px;
 	}
-
-	
 
 	.mapGrid {
 		margin: auto;
