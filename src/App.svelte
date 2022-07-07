@@ -184,7 +184,7 @@
 			<MapMini year={"2010"} tracts={inc2010.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ih16"}/>
+			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ah16"}/>
 		</div>
 		<div class="legend">
 			<Legend 
@@ -358,6 +358,7 @@
 	.big-number-box {
 		margin: auto;
 		margin-top: 0px;
+		width: 280px;
 	}
 	.legend {
 		margin: auto;

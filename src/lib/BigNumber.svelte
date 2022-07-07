@@ -1,5 +1,4 @@
 <script>
-
 	export var number;
 	export var label;
 	export var type;

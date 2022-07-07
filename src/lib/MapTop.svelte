@@ -28,19 +28,19 @@
 	const params =	{
 		"hhld_inc": {
 			"name": "Household Income",
-			"var_name": "ih21",
+			"var_name": "ah21",
 			"colours": coloursD,
 			"ref_point": 102721 
 		},	
 		"ind_inc": {
 			"name": "Individual Income",
-			"var_name": "ii21",
+			"var_name": "ai21",
 			"colours": coloursD,
 			"ref_point": 52268
 		},
 		"pov_lim": {
 			"name": "Poverty Rate LIM",
-			"var_name": "l21",
+			"var_name": "li21",
 			"colours": coloursS,
 			"ref_point": 16.3
 			// 26.3 ?

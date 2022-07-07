@@ -27,20 +27,20 @@
 		
 	$: if (currentLayer === "hhld_inc") {
 		features.map(item => {
-		item.properties["ih21"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ih21"]) - +(item.properties["ih16"])* 1.0725) / (+(item.properties["ih16"])* 1.0725)))
+		item.properties["ah21"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ah21"]) - +(item.properties["ah16"])* 1.0725) / (+(item.properties["ah16"])* 1.0725)))
 			: (item.properties.colourC = "white");
 		});
 	} else if (currentLayer === "ind_inc") {
 		features.map(item => {
-		item.properties["ih21"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ii21"]) - +(item.properties["ii16"])* 1.0725) / (+(item.properties["ii16"])* 1.0725)))
+		item.properties["ai21"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ai21"]) - +(item.properties["ai16"])* 1.0725) / (+(item.properties["ai16"])* 1.0725)))
 			: (item.properties.colourC = "white");
 		});
 	} else {
 		features.map(item => {
-		item.properties["ih21"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["l21"]) - +(item.properties["l16"])) / (+(item.properties["l16"]))))
+		item.properties["li21"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["li21"]) - +(item.properties["li16"])) / (+(item.properties["li16"]))))
 			: (item.properties.colourC = "white");
 		});
 	}
