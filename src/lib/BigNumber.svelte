@@ -4,7 +4,7 @@
 	export var type;
 
 	$: colour = "black";	
-	$: type ? colour = "black" : colour = "rgb(66, 66, 66)";
+	$: type ? colour = "black" : colour = "rgb(120, 120, 120)";
 
 </script>
 

@@ -68,11 +68,11 @@
 		title1 = "Population density by census tract"
 		title2 = "(persons per square km)"
 		labels = [
-			"0 to 2,000",
-			"2,000 to 4,000",
-			"4,000 to 6,000",
-			"6,000 to 8,000",
-			"More than 8,000"
+			"0 to 1,000",
+			"1,000 to 4,000",
+			"4,000 to 7,000",
+			"7,000 to 10,000",
+			"More than 10,000"
 		]
 	}
 	else {

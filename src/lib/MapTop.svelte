@@ -69,7 +69,7 @@
 	$: colorDiv = [];
 	$: if (currentLayer === "pop_den") {
 		colorDiv = scaleThreshold()
-		.domain([2000,4000,6000,8000])
+		.domain([1000,4000,7000,10000])
 		.range(coloursSB);
 	} else if (currentLayer === "pov_lim") {
 		colorDiv = scaleThreshold()
