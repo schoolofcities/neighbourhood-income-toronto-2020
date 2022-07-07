@@ -7,7 +7,8 @@
 	import tracts2020 from "../data/2020.geo.json";
 
 	export var coloursD;	
-	export var coloursS;
+	export var coloursSR;
+	export var coloursSB;
 	export var currentLayer;
 
 	let divWidth = 800;
@@ -27,13 +28,13 @@
 	
 	const params =	{
 		"hhld_inc": {
-			"name": "Household Income",
+			"name": "Household Income Average",
 			"var_name": "ah21",
 			"colours": coloursD,
 			"ref_point": 102721 
 		},	
 		"ind_inc": {
-			"name": "Individual Income",
+			"name": "Individual Income Average",
 			"var_name": "ai21",
 			"colours": coloursD,
 			"ref_point": 52268
@@ -41,14 +42,40 @@
 		"pov_lim": {
 			"name": "Poverty Rate LIM",
 			"var_name": "li21",
-			"colours": coloursS,
+			"colours": coloursSR,
+			"ref_point": 16.3 
+			// double check this number? - but doesn't matter for this map
+		},
+		"hhld_inc_m": {
+			"name": "Household Income Median",
+			"var_name": "mh21",
+			"colours": coloursD,
+			"ref_point": 80000 
+		},	
+		"ind_inc_m": {
+			"name": "Individual Income Median",
+			"var_name": "mi21",
+			"colours": coloursD,
+			"ref_point": 42000
+		},
+		"pop_den": {
+			"name": "Population Density",
+			"var_name": "p21",
+			"colours": coloursSB,
 			"ref_point": 16.3
-			// 26.3 ?
 		}
 	}
 
 	$: colorDiv = [];
-	$: if (currentLayer !== "pov_lim") {
+	$: if (currentLayer === "pop_den") {
+		colorDiv = scaleThreshold()
+		.domain([2000,4000,6000,8000])
+		.range(coloursSB);
+	} else if (currentLayer === "pov_lim") {
+		colorDiv = scaleThreshold()
+		.domain([10,20,30,40])
+		.range(coloursSR);
+	} else {
 		colorDiv = scaleThreshold()
 		.domain([
 			params[currentLayer]["ref_point"] * 0.7,
@@ -57,10 +84,6 @@
 			params[currentLayer]["ref_point"] * 1.3,
 		])
 		.range(coloursD);
-	} else {
-		colorDiv = scaleThreshold()
-		.domain([10,20,30,40])
-		.range(coloursS);
 	}
 
 	$: attributeName = params[currentLayer]["var_name"]
@@ -68,9 +91,16 @@
 	$: features = tracts2020.features;
 		
 	$: features.map(item => {
-	item.properties[attributeName]	
-		? (item.properties.colour = colorDiv(item.properties[attributeName]))
-		: (item.properties.colour = "white");
+		if (currentLayer !== "pop_den") {
+			item.properties[attributeName]	
+			? (item.properties.colour = colorDiv(item.properties[attributeName]))
+			: (item.properties.colour = "white");
+		} else {
+			item.properties[attributeName]	
+			? (item.properties.colour = colorDiv(item.properties[attributeName] / item.properties["landarea"]))
+			: (item.properties.colour = "white");
+		}
+			
 	});
 	
 	$: placeLabel = true;

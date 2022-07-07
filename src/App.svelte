@@ -17,7 +17,8 @@
 
 	let coloursDiv = ["#DC4633", "#ee9d78", "#f2dfce", "#7eb4b3", "#007fa3"];
 	let coloursDiv2 = ["#316961", "#9dab9e", "#f2dfce", "#ad7ea2", "#824287"].reverse();
-	let coloursSeq = ['#f2dfce','#ecb4a2','#e5816f','#dc4633','#ed1b00'];
+	let coloursSeqRed = ['#f2dfce','#ecb4a2','#e5816f','#dc4633','#ed1b00'];
+	let coloursSeqBlue = ['#f2dfce','#b3c6c3','#79afb9','#3d97ae','#007fa3'];
 	let spacing = [50, 100, 150, 200, 250]
 
 	const avg_hhld_inc_2020 = 110000;
@@ -84,7 +85,7 @@
 			class:selected="{currentLayer === 'pov_lim'}"
 			class:not-selected="{currentLayer !== 'pov_lim'}"
 			on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
-
+	
 			<button 
 			class:selected="{currentLayer === 'hhld_inc'}"
 			class:not-selected="{currentLayer !== 'hhld_inc'}"
@@ -95,10 +96,26 @@
 			class:selected="{currentLayer === 'ind_inc'}"
 			class:not-selected="{currentLayer !== 'ind_inc'}"
 			on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
+	
+			<button 
+			class:selected="{currentLayer === 'hhld_inc_m'}"
+			class:not-selected="{currentLayer !== 'hhld_inc_m'}"
+			on:click="{() => currentLayer = 'hhld_inc_m'}"
+			id="hhld_inc_m">Median Household Income</button>
+		
+			<button 
+			class:selected="{currentLayer === 'ind_inc_m'}"
+			class:not-selected="{currentLayer !== 'ind_inc_m'}"
+			on:click="{() => currentLayer = 'ind_inc_m'}" id="ind_inc_m">Median Individual Income</button>
+	
+			<button 
+			class:selected="{currentLayer === 'pop_den'}"
+			class:not-selected="{currentLayer !== 'pop_den'}"
+			on:click="{() => currentLayer = 'pop_den'}"  id="pop_den">Population Density</button>
 		</div>
 		
 		<div class="mapBig">
-			<MapTop coloursD = {coloursDiv} coloursS = {coloursSeq} currentLayer={currentLayer}/>
+			<MapTop coloursD = {coloursDiv} coloursSR = {coloursSeqRed} coloursSB = {coloursSeqBlue} currentLayer={currentLayer}/>
 		</div>
 	</div>
 
@@ -112,7 +129,7 @@
 			<Legend 
 				layer = {currentLayer}
 				coloursDiv = {coloursDiv}
-				coloursSeq = {coloursSeq}
+				coloursSeq = {coloursSeqRed}
 			/>
 		</div>
 	</div>
@@ -148,6 +165,21 @@
 		class:not-selected="{currentLayer !== 'ind_inc'}"
 		on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
 
+		<button 
+		class:selected="{currentLayer === 'hhld_inc_m'}"
+		class:not-selected="{currentLayer !== 'hhld_inc_m'}"
+		on:click="{() => currentLayer = 'hhld_inc_m'}"
+		id="hhld_inc_m">Median Household Income</button>
+	
+		<button 
+		class:selected="{currentLayer === 'ind_inc_m'}"
+		class:not-selected="{currentLayer !== 'ind_inc_m'}"
+		on:click="{() => currentLayer = 'ind_inc_m'}" id="ind_inc_m">Median Individual Income</button>
+
+		<button 
+		class:selected="{currentLayer === 'pop_den'}"
+		class:not-selected="{currentLayer !== 'pop_den'}"
+		on:click="{() => currentLayer = 'pop_den'}"  id="pop_den">Population Density</button>
 	</div>
 
 	<div class="mapBig">
@@ -190,7 +222,7 @@
 			<Legend 
 				layer = {"hhld_inc"}
 				coloursDiv = {coloursDiv}
-				coloursSeq = {coloursSeq}
+				coloursSeq = {coloursSeqRed}
 			/>
 		</div>
 	</div>
