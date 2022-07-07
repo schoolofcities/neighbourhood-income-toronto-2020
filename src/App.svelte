@@ -1,6 +1,7 @@
 <script>
 
 	import Top from "./lib/TopSofC.svelte";
+	import UnderConstruction from "./lib/UnderConstruction.svelte";
 	import MapTop from "./lib/MapTop.svelte";
 	import MapDiff from "./lib/MapDiff.svelte";
 	import MapMini from "./lib/MapMini.svelte";
@@ -54,6 +55,8 @@
 <Top/>
 
 <main>
+
+	<UnderConstruction/>
 
 	<div class="title">
 
