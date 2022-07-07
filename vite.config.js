@@ -3,6 +3,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/neighbourhood-income-toronto-2021",
+  base: "/neighbourhood-income-toronto-2020",
   plugins: [svelte()]
 })
