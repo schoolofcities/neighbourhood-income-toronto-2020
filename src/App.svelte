@@ -288,7 +288,7 @@
 	main {
 		margin: 0 auto;
 		width: 100%;
-		min-width: 420px;
+		min-width: 320px;
 		max-width: 1200px;
 		position: relative;
 	}
@@ -379,6 +379,12 @@
 		border: solid 1px rgb(238, 238, 238);
 		border-radius: 5px; 
 		border-bottom-right-radius: 200px;
+	}
+
+	@media (max-width:420px) {
+		.mapBig {
+			border: none;
+		}
 	}
 
 	.top-info {
