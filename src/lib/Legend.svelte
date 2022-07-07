@@ -1,7 +1,8 @@
 <script>
 	export var layer;
 	export var coloursDiv;
-	export var coloursSeq;
+	export var coloursSeqBlue;
+	export var coloursSeqRed;
 
 	$: colours = coloursDiv
 	$: title1 = "Census tract average household income relative"
@@ -37,9 +38,45 @@
 			"High Income (115% to 130%)",
 			"Very High Income (more than 130%)"
 		]
-	} 
+	}
+	else if (layer === "hhld_inc_m") {
+		colours = coloursDiv
+		title1 = "Census tract median household income relative"
+		title2 = "to the City of Toronto's median for the year:"
+		labels = [
+			"Very Low Income (less than 70%)",
+			"Low Income (70% to 85%)",
+			"Middle Income (85% to 115%)",
+			"High Income (115% to 130%)",
+			"Very High Income (more than 130%)"
+		]
+	}
+	else if (layer === "ind_inc_m") {
+		colours = coloursDiv
+		title1 = "Census tract median individual income relative"
+		title2 = "to the City of Toronto's median for the year:"
+		labels = [
+			"Very Low Income (less than 70%)",
+			"Low Income (70% to 85%)",
+			"Middle Income (85% to 115%)",
+			"High Income (115% to 130%)",
+			"Very High Income (more than 130%)"
+		]
+	}
+	else if (layer === "pop_den") {
+		colours = coloursSeqBlue
+		title1 = "Population density by census tract"
+		title2 = "(persons per square km)"
+		labels = [
+			"0 to 2,000",
+			"2,000 to 4,000",
+			"4,000 to 6,000",
+			"6,000 to 8,000",
+			"More than 8,000"
+		]
+	}
 	else {
-		colours = coloursSeq
+		colours = coloursSeqRed
 		title1 = "Poverty rate by census tract based "
 		title2 = "on the Low-Income Measure (LIM)"
 		labels = [

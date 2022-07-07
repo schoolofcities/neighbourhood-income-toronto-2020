@@ -129,7 +129,7 @@
 			<Legend 
 				layer = {currentLayer}
 				coloursDiv = {coloursDiv}
-				coloursSeq = {coloursSeqRed}
+				coloursSeqRed = {coloursSeqRed} coloursSeqBlue = {coloursSeqBlue}
 			/>
 		</div>
 	</div>
@@ -222,7 +222,7 @@
 			<Legend 
 				layer = {"hhld_inc"}
 				coloursDiv = {coloursDiv}
-				coloursSeq = {coloursSeqRed}
+				coloursSeqRed = {coloursSeqRed} coloursSeqBlue = {coloursSeqBlue}
 			/>
 		</div>
 	</div>
