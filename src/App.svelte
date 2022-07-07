@@ -136,8 +136,8 @@
 			<BigNumber type = {"hhld_inc" === currentLayer} number={"$" + avg_hhld_inc_2020.toLocaleString("en-US")} label={"Average Household Income"}/>
 			<BigNumber type = {"ind_inc" === currentLayer} number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
 			<BigNumber type = {"hhld_inc_m" === currentLayer} number={"$" + med_hhld_inc_2020.toLocaleString("en-US")} label={"Median Household Income"}/>
-			<BigNumber type = {"ind_inc_m" === currentLayer} number={"$" + med_ind_inc_2020.toLocaleString("en-US")} label={"Population Density"}/>
-			<BigNumber type = {"pop_den" === currentLayer} number={pov_lim_2020} label={"Population Density (p/km2)"}/>
+			<BigNumber type = {"ind_inc_m" === currentLayer} number={"$" + med_ind_inc_2020.toLocaleString("en-US")} label={"Median Individual Income"}/>
+			<BigNumber type = {"pop_den" === currentLayer} number={pop_den_2020.toLocaleString("en-US")} label={"Population Density (p/km2)"}/>
 		</div>
 	</div>
 
@@ -385,6 +385,7 @@
 		display: grid;
 		gap: 0px 0px;
 		grid-template-columns: repeat(2, 1fr);
+		padding-bottom: 25px;
 	}
 
 	@media (max-width:580px) {

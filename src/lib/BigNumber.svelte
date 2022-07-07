@@ -16,7 +16,7 @@
 <style>
 	.big-number {
 		overflow: hidden;
-		padding-top: 8px;
+		padding-top: 5px;
 		width: 280px;
 		margin-bottom: -5px;
 	}
