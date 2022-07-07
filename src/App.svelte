@@ -198,7 +198,7 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>This is just a first look at this data, more research is needed to further understand the how and why of these patterns and their changes over time.</p>
+		<p>This is just a first look at this data, certainly more research and context is needed to further understand the how and why of these patterns and their changes over time.</p>
 	</div>	
 
 
@@ -206,17 +206,17 @@
 	<div id="mini-line"></div>
 
 	<div class="info">
-		<h3>More Information</h3>
+		<h3>Data Sources & More Information</h3>
 		<p>
 		This page and its content were compiled by <a href="https://jamaps.github.io">Jeff Allen</a> at the <a href="https://www.schoolofcities.utoronto.ca/">School of Cities</a>.
 		</p>
 			
 		<p>
-		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the poverty line is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>. 
+		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the poverty line is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>. For the maps from 1960 to 2010, only average household income is shown due to a lack of data from historical censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a> so even though the patterns are likely similar, this should be treated with caution since it does not allow for a direct comparison with later years. 
 		</p>
 		
 		<p>
-		The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a>. Code and data for this page are hosted on <a href="https://github.com/schoolofcities/neighbourhood-income-toronto-2021">GitHub</a>. For the historical maps (1960 to 2020), only average household income is shown due to a lack of data from 20th century censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a>.
+		The maps were created using <a href="https://d3js.org/">D3</a> and <a href="https://svelte.dev/">Svelte</a>. Code and data for this page are hosted on <a href="https://github.com/schoolofcities/neighbourhood-income-toronto-2021">GitHub</a>. 
 		</p>
 
 		<p>

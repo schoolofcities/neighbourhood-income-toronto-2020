@@ -20,6 +20,8 @@ fields = [
 	["hhld_size","w_dwe","hhlds"],
 	["avg_inc_ind","w_pop","pop2016"],
 	["avg_inc_hhld","w_dwe","hhlds"],
+	["med_inc_ind","w_pop","pop2016"],
+	["med_inc_hhld","w_dwe","hhlds"],
 	["lim_at","w_dwe","hhlds"],
 	["lico_at","w_dwe","hhlds"],
 ]

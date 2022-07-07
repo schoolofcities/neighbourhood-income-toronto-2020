@@ -21,11 +21,9 @@ df["Member ID: Profile of Census Tracts (2247)"] = df["Member ID: Profile of Cen
 
 
 
-variable_ids = [1,2,3,4,5,51,58,674,751,857,867]
+variable_ids = [1,2,3,4,5,6,51,58,663,674,742,751,857,867]
 
 df = df[df['Member ID: Profile of Census Tracts (2247)'].isin(variable_ids)]
-
-
 
 df = df[["GEO_CODE (POR)","Member ID: Profile of Census Tracts (2247)","Dim: Sex (3): Member ID: [1]: Total - Sex"]]
 
