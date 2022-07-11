@@ -345,6 +345,7 @@
 		margin: auto;
 		max-width: 600px;
 		width: 100%;
+		min-width: 375px;
 	}
 	@media (max-width:620px) {
 		.layer-button-wrapper {
@@ -456,6 +457,5 @@
 		line-height: 160%;
 		text-align: left;
 	}
-	
 	
 </style>
