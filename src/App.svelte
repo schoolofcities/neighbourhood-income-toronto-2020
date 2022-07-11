@@ -94,26 +94,26 @@
 			on:click="{() => currentLayer = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
 	
 			<button 
+			class:selected="{currentLayer === 'hhld_inc_m'}"
+			class:not-selected="{currentLayer !== 'hhld_inc_m'}"
+			on:click="{() => currentLayer = 'hhld_inc_m'}"
+			id="hhld_inc_m">Median Household Income</button>
+	
+			<button 
 			class:selected="{currentLayer === 'hhld_inc'}"
 			class:not-selected="{currentLayer !== 'hhld_inc'}"
 			on:click="{() => currentLayer = 'hhld_inc'}"
 			id="hhld_inc">Average Household Income</button>
+	
+			<button 
+			class:selected="{currentLayer === 'ind_inc_m'}"
+			class:not-selected="{currentLayer !== 'ind_inc_m'}"
+			on:click="{() => currentLayer = 'ind_inc_m'}" id="ind_inc_m">Median Individual Income</button>
 		
 			<button 
 			class:selected="{currentLayer === 'ind_inc'}"
 			class:not-selected="{currentLayer !== 'ind_inc'}"
 			on:click="{() => currentLayer = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
-	
-			<button 
-			class:selected="{currentLayer === 'hhld_inc_m'}"
-			class:not-selected="{currentLayer !== 'hhld_inc_m'}"
-			on:click="{() => currentLayer = 'hhld_inc_m'}"
-			id="hhld_inc_m">Median Household Income</button>
-		
-			<button 
-			class:selected="{currentLayer === 'ind_inc_m'}"
-			class:not-selected="{currentLayer !== 'ind_inc_m'}"
-			on:click="{() => currentLayer = 'ind_inc_m'}" id="ind_inc_m">Median Individual Income</button>
 	
 			<button 
 			class:selected="{currentLayer === 'pop_den'}"
@@ -136,10 +136,10 @@
 		</div>
 		<div class="big-number-box">
 			<BigNumber type = {"pov_lim" === currentLayer} number={pov_lim_2020 + "%"} label={"Poverty Rate (LIM)"}/>
-			<BigNumber type = {"hhld_inc" === currentLayer} number={"$" + avg_hhld_inc_2020.toLocaleString("en-US")} label={"Average Household Income"}/>
-			<BigNumber type = {"ind_inc" === currentLayer} number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
 			<BigNumber type = {"hhld_inc_m" === currentLayer} number={"$" + med_hhld_inc_2020.toLocaleString("en-US")} label={"Median Household Income"}/>
+			<BigNumber type = {"hhld_inc" === currentLayer} number={"$" + avg_hhld_inc_2020.toLocaleString("en-US")} label={"Average Household Income"}/>
 			<BigNumber type = {"ind_inc_m" === currentLayer} number={"$" + med_ind_inc_2020.toLocaleString("en-US")} label={"Median Individual Income"}/>
+			<BigNumber type = {"ind_inc" === currentLayer} number={"$" + avg_ind_inc_2020.toLocaleString("en-US")} label={"Average Individual Income"}/>
 			<BigNumber type = {"pop_den" === currentLayer} number={pop_den_2020.toLocaleString("en-US")} label={"Population Density (p/km2)"}/>
 		</div>
 	</div>
@@ -165,26 +165,26 @@
 		on:click="{() => currentLayerDiff = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
 
 		<button 
+		class:selected="{currentLayerDiff === 'hhld_inc_m'}"
+		class:not-selected="{currentLayerDiff !== 'hhld_inc_m'}"
+		on:click="{() => currentLayerDiff = 'hhld_inc_m'}"
+		id="hhld_inc_m">Median Household Income</button>
+
+		<button 
 		class:selected="{currentLayerDiff === 'hhld_inc'}"
 		class:not-selected="{currentLayerDiff !== 'hhld_inc'}"
 		on:click="{() => currentLayerDiff = 'hhld_inc'}"
 		id="hhld_inc">Average Household Income</button>
+
+		<button 
+		class:selected="{currentLayerDiff === 'ind_inc_m'}"
+		class:not-selected="{currentLayerDiff !== 'ind_inc_m'}"
+		on:click="{() => currentLayerDiff = 'ind_inc_m'}" id="ind_inc_m">Median Individual Income</button>
 	
 		<button 
 		class:selected="{currentLayerDiff === 'ind_inc'}"
 		class:not-selected="{currentLayerDiff !== 'ind_inc'}"
 		on:click="{() => currentLayerDiff = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
-
-		<button 
-		class:selected="{currentLayerDiff === 'hhld_inc_m'}"
-		class:not-selected="{currentLayerDiff !== 'hhld_inc_m'}"
-		on:click="{() => currentLayerDiff = 'hhld_inc_m'}"
-		id="hhld_inc_m">Median Household Income</button>
-	
-		<button 
-		class:selected="{currentLayerDiff === 'ind_inc_m'}"
-		class:not-selected="{currentLayerDiff !== 'ind_inc_m'}"
-		on:click="{() => currentLayerDiff = 'ind_inc_m'}" id="ind_inc_m">Median Individual Income</button>
 
 		<button 
 		class:selected="{currentLayerDiff === 'pop_den'}"
