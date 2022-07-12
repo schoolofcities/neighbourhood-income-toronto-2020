@@ -56,7 +56,7 @@
 
 <main>
 
-	<!-- <UnderConstruction/> -->
+	<UnderConstruction/>
 
 	<div class="title">
 
@@ -258,7 +258,7 @@
 		</p>
 
 		<p>
-		For the maps from 1960 to 2010, only average household income is shown due to a lack of data from historical censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a> so even though the patterns are likely similar, this should be treated with caution since it does not allow for a direct comparison with later years. 
+		For the maps from 1960 to 2010, only average household income is shown due to a lack of data from historical censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a> so even though the patterns are likely quite similar, this should be treated with caution since it does not allow for a direct comparison with later years. 
 		</p>
 		
 		<p>
