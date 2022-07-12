@@ -56,7 +56,7 @@
 
 <main>
 
-	<UnderConstruction/>
+	<!-- <UnderConstruction/> -->
 
 	<div class="title">
 
@@ -254,7 +254,11 @@
 		</p>
 			
 		<p>
-		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a>. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the poverty line is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>. For the maps from 1960 to 2010, only average household income is shown due to a lack of data from historical censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a> so even though the patterns are likely similar, this should be treated with caution since it does not allow for a direct comparison with later years. 
+		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a> and the <a href="https://mdl.library.utoronto.ca/">Map and Data Library</a> at the University of Toronto. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the povert rate is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>, a poverty line defined by Statistics Canada. The map comparing 2015 to 2020 data makes use of the <a href="https://github.com/jamaps/CLTD">Canadian Longitudinal Tract Database</a> to apportion data to the same spatial units.
+		</p>
+
+		<p>
+		For the maps from 1960 to 2010, only average household income is shown due to a lack of data from historical censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a> so even though the patterns are likely similar, this should be treated with caution since it does not allow for a direct comparison with later years. 
 		</p>
 		
 		<p>
