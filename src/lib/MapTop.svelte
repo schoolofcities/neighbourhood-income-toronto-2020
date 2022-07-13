@@ -29,40 +29,39 @@
 	const params =	{
 		"hhld_inc": {
 			"name": "Household Income Average",
-			"var_name": "ah21",
+			"var_name": "aiath20",
 			"colours": coloursD,
-			"ref_point": 102721 
+			"ref_point": 96000 
 		},	
 		"ind_inc": {
 			"name": "Individual Income Average",
-			"var_name": "ai21",
+			"var_name": "aiati20",
 			"colours": coloursD,
-			"ref_point": 52268
+			"ref_point": 49080
 		},
 		"pov_lim": {
 			"name": "Poverty Rate LIM",
-			"var_name": "li21",
+			"var_name": "limat21",
 			"colours": coloursSR,
-			"ref_point": 16.3 
-			// double check this number? - but doesn't matter for this map
+			"ref_point": 13.2
 		},
 		"hhld_inc_m": {
 			"name": "Household Income Median",
-			"var_name": "mh21",
+			"var_name": "miath20",
 			"colours": coloursD,
-			"ref_point": 80000 
+			"ref_point": 74000 
 		},	
 		"ind_inc_m": {
 			"name": "Individual Income Median",
-			"var_name": "mi21",
+			"var_name": "miati20",
 			"colours": coloursD,
-			"ref_point": 42000
+			"ref_point": 36000
 		},
 		"pop_den": {
 			"name": "Population Density",
 			"var_name": "p21",
 			"colours": coloursSB,
-			"ref_point": 16.3
+			"ref_point": 4428	
 		}
 	}
 
@@ -73,15 +72,32 @@
 		.range(coloursSB);
 	} else if (currentLayer === "pov_lim") {
 		colorDiv = scaleThreshold()
-		.domain([10,20,30,40])
+		.domain([10,15,20,25])
 		.range(coloursSR);
-	} else {
+	} else if (currentLayer === "hhld_inc_m") {
+		colorDiv = scaleThreshold()
+		.domain([55000,70000,85000,100000])
+		.range(coloursD);
+	}  else if (currentLayer === "hhld_inc") {
+		colorDiv = scaleThreshold()
+		.domain([75000,90000,100000,115000])
+		.range(coloursD);
+	}  else if (currentLayer === "ind_inc") {
+		colorDiv = scaleThreshold()
+		.domain([35000,50000,65000,80000])
+		.range(coloursD);
+	} else if (currentLayer === "ind_inc_m") {
+		colorDiv = scaleThreshold()
+		.domain([30000,40000,50000,60000])
+		.range(coloursD);
+	}
+	else {
 		colorDiv = scaleThreshold()
 		.domain([
-			params[currentLayer]["ref_point"] * 0.7,
-			params[currentLayer]["ref_point"] * 0.85,
-			params[currentLayer]["ref_point"] * 1.15,
-			params[currentLayer]["ref_point"] * 1.3,
+			params[currentLayer]["ref_point"] * 0.8,
+			params[currentLayer]["ref_point"] * 0.9,
+			params[currentLayer]["ref_point"] * 1.1,
+			params[currentLayer]["ref_point"] * 1.2,
 		])
 		.range(coloursD);
 	}

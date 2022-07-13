@@ -7,6 +7,7 @@
 	import MapMini from "./lib/MapMini.svelte";
 	import BigNumber from "./lib/BigNumber.svelte";
 	import Legend from "./lib/Legend.svelte";
+	import LegendTop from "./lib/LegendTop.svelte";
 	import LegendDiff from "./lib/LegendDiff.svelte";
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
@@ -126,7 +127,7 @@
 
 	<div class="top-info">
 		<div class="legend">
-			<Legend 
+			<LegendTop 
 				layer = {currentLayer}
 				coloursDiv = {coloursDiv}
 				coloursSeqRed = {coloursSeqRed} coloursSeqBlue = {coloursSeqBlue}
