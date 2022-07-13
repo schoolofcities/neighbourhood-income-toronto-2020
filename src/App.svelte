@@ -11,7 +11,7 @@
 	import inc1960 from "./data/1960.geo.json";
 	import inc1970 from "./data/1970.geo.json";
 	import inc1980 from "./data/1980.geo.json";
-	import inc1990 from "./data/1990.geo.json"
+	import inc1990 from "./data/1990.geo.json";
 	import inc2000 from "./data/2000.geo.json";
 	import inc2010 from "./data/2010.geo.json";
 	import inc2020 from "./data/2020.geo.json";
@@ -22,12 +22,12 @@
 	let coloursSeqBlue = ['#f2dfce','#b3c6c3','#79afb9','#3d97ae','#007fa3'];
 	let spacing = [50, 100, 150, 200, 250]
 
-	const avg_hhld_inc_2020 = 110000;
-	const avg_ind_inc_2020 = 60000;
-	const pov_lim_2020 = 18.2;
-	const med_hhld_inc_2020 = 90000;
-	const med_ind_inc_2020 = 42000;
-	const pop_den_2020 = 4200;
+	const avg_hhld_inc_2020 = 96000;
+	const avg_ind_inc_2020 = 49080;
+	const pov_lim_2020 = 13.2;
+	const med_hhld_inc_2020 = 74000;
+	const med_ind_inc_2020 = 36000;
+	const pop_den_2020 = 4428;
 
 	$: currentLayer = "hhld_inc";
 	$: currentLayerDiff = "hhld_inc";
@@ -56,8 +56,6 @@
 
 <main>
 	
-	<UnderConstruction/>
-
 	<div class="title">
 
 		<div id="mini-line"></div>
@@ -226,7 +224,7 @@
 			<MapMini year={"2010"} tracts={inc2010.features} colours = {coloursDiv}  variable={"avg_inc"}/>
 		</div>
 		<div class="mapSmall">
-			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"ah16"}/>
+			<MapMini year={"2020"} tracts={inc2020.features} colours = {coloursDiv}  variable={"aibth20"}/>
 		</div>
 		<div class="legend">
 			<Legend 
