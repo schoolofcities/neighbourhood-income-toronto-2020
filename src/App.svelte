@@ -83,7 +83,7 @@
 	
 
 	<div class="text">
-		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create maps of income (after tax) for the City of Toronto which clearly indicate inequalities between neighbourhoods.
+		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we were able to create maps of <span id="bold">after-tax income</span> for the <span id="bold">City of Toronto</span> that clearly indicate differences between neighbourhoods.
 		</p>	
 	</div>
 
@@ -147,13 +147,13 @@
 
 	<div class="text">
 		<p>		
-			These maps highlight greater concentrations of poverty in parts of the downtown core as well as in pockets in the suburbs, particularly in Scarborough and northern Etobicoke, mostly in neighbourhoods with higher densities of rental apartment buildings. Higher-income neighbourhoods are located more within the centre of the City (e.g. North Toronto), and within some neighbourhoods in the east (e.g. the Beaches) and west (e.g. the Kingsway).</p>
+			These maps highlight greater concentrations of poverty in parts of the downtown core as well as in pockets in the suburbs, particularly in Scarborough and northern Etobicoke, often in neighbourhoods with higher densities of rental apartment buildings. Higher-income neighbourhoods are located more within the centre of the City (e.g. North Toronto), and within some neighbourhoods in the east (e.g. the Beaches) and west (e.g. the Kingsway).</p>
 		</div>
 	
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>Now let's take a look at how these patterns have changed over time. Incomes in 2020 were strongly affected by COVID-19. The following map shows the percent difference in neighbourhood income between 2019 and 2020. The green areas indicate an increase and the purple areas indicate a decrease. 
+		<p>Now let's take a look at how these patterns have changed over time. Incomes in 2020 were strongly affected by the COVID-19 pandemic. The following maps show the percent difference in neighbourhood income between 2019 and 2020. The green areas indicate an increase in income and the purple areas indicate a decrease. 
 		</p>
 	</div>
 
@@ -177,13 +177,13 @@
 
 	<div class="text">		
 		<p>
-		Interestingly, those neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above). It's uncertain as to why, but it might be because secondary earners in a household were able to stop working during March 2020, meaning they would only have incomes from the first quarter of the year to report.</p>
+		The neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above), meaning an overall decrease in income inequality. This aligns with Statistics Canada's <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/220713/dq220713d-eng.htm"><b>findings</b></a> that income inequality across Canada decreased due to temporary pandemic-related benefits (e.g. CERB). Drops in income in wealthier areas on the map above potentially indicate fewer benefits for households in wealthier neighbourhoods. It's also possible that secondary earners in wealthier households were more likely to voluntarily stop work in the spring of 2020, not receive pandemic-related benefits, and thus only have a portion of a year's income to report.</p>
 	</div>
 
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Below are a series of maps showing <span id="bold">average household income</span> for each of the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since additionally concentrated in more suburban neighbourhoods, particularly in the northeast and northwest of the city, a trend often cited as a suburbanization of poverty.
+		<p>Over a longer term, the spatial patterns of wealth and poverty in the city have changed substantially. Below are a series of maps showing <span id="bold">before-tax average household income</span> for each of the six decades prior to 2020. These clearly show that lower-income residents were once clustered in the centre, in and around downtown Toronto, but have since additionally concentrated in more suburban neighbourhoods, particularly in the northeast and northwest of the city, a trend often cited as a suburbanization of poverty.
 	</div>
 
 	<div class="mapGrid">
@@ -233,11 +233,11 @@
 		</p>
 			
 		<p>
-		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a> and the <a href="https://mdl.library.utoronto.ca/">Map and Data Library</a> at the University of Toronto. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the povert rate is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>, a poverty line defined by Statistics Canada. The map comparing 2015 to 2020 data makes use of the <a href="https://github.com/jamaps/CLTD">Canadian Longitudinal Tract Database</a> to apportion data to the same spatial units.
+		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a> and the <a href="https://mdl.library.utoronto.ca/">Map and Data Library</a> at the University of Toronto. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the poverty rate is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>, a poverty line defined by Statistics Canada. The map comparing 2015 to 2020 data makes use of the <a href="https://github.com/jamaps/CLTD">Canadian Longitudinal Tract Database</a> to apportion data to the same spatial units.
 		</p>
 
 		<p>
-		For the maps from 1960 to 2010, only average household income is shown due to a lack of data from historical censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a> so even though the patterns are likely quite similar, this should be treated with caution since it does not allow for a direct comparison with later years. 
+		For the maps from 1960 to 2010, only before-tax average household income is shown due to a lack of data from historical censuses. For 1960 specifically, due to lack of data, the variable mapped is average family income rather than average household income. <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam004">Census families</a> are a subset of all <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=households-menage007">households</a> so even though the patterns are likely quite similar, this should be treated with caution since it does not allow for a direct comparison with later years. 
 		</p>
 		
 		<p>

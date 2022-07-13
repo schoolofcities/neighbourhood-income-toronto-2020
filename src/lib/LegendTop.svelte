@@ -17,7 +17,7 @@
 
 	$: if (layer === "ind_inc") {
 		colours = coloursDiv
-		title1 = "Census tract average after-tax individual income in 2020" 
+		title1 = "Census tract average after-tax individual income" 
 		title2 = "among income recipients aged 15 years and up"
 		labels = [
 			"Less than $35,000",
@@ -53,7 +53,7 @@
 	}
 	else if (layer === "ind_inc_m") {
 		colours = coloursDiv
-		title1 = "Census tract median after-tax individual income in 2020" 
+		title1 = "Census tract median after-tax individual income" 
 		title2 = "among income recipients aged 15 years and up"
 		labels = [
 			"Less than $30,000",
