@@ -31,7 +31,7 @@
 	const pop_den_2020 = 4428;
 
 	$: currentLayer = "hhld_inc";
-	$: currentLayerDiff = "hhld_inc";
+	$: currentLayerDiff = "ind_inc";
 	
 </script>
 
