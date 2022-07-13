@@ -177,7 +177,7 @@
 
 	<div class="text">		
 		<p>
-		Interestingly, those neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above). It's uncertain as to why, but it might be because secondary earners in a household stopped were able to stop working during March 2020, meaning they would only have incomes from the first quarter of the year to report.</p>
+		Interestingly, those neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above). It's uncertain as to why, but it might be because secondary earners in a household were able to stop working during March 2020, meaning they would only have incomes from the first quarter of the year to report.</p>
 	</div>
 
 	<div id="mini-line"></div>
