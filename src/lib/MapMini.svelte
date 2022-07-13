@@ -1,5 +1,6 @@
 <script>
 	import formerMun from "../data/formerMun.geo.json";
+	import formerMunOld from "../data/formerMunOld.geo.json";
 	import { geoPath, geoMercator, scaleThreshold } from "d3";
 
 	export var year;
@@ -45,17 +46,31 @@
 
 <div id="container" class="svg-container" bind:offsetWidth={divWidth}>
 	<svg width={innerWidth} {height}>
-		{#each formerMun.features as data}
-			<path id="fm-back" d={path(data)} />
-		{/each}
+		{#if year > 1974}
+			{#each formerMun.features as data}
+				<path id="fm-back" d={path(data)} />
+			{/each}
+		{/if}
+		{#if year <= 1974}
+			{#each formerMunOld.features as data}
+				<path id="fm-back" d={path(data)} />
+			{/each}
+		{/if}
 
 		{#each tracts as data}
 			<path id="ct" d={path(data)} fill={data.properties.color} />
 		{/each}
 
-		{#each formerMun.features as data}
-			<path id="fm" d={path(data)} />
-		{/each}
+		{#if year > 1974}
+			{#each formerMun.features as data}
+				<path id="fm" d={path(data)} />
+			{/each}
+		{/if}
+		{#if year <= 1974}
+			{#each formerMunOld.features as data}
+				<path id="fm" d={path(data)} />
+			{/each}
+		{/if}
 
 		<text id="year-label" x="5" y="22">{year}</text>
 	</svg>
