@@ -83,7 +83,7 @@
 	
 
 	<div class="text">
-		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create maps of the City of Toronto clearly indicating income inequalities between neighbourhoods. 
+		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create maps of income (after tax) for the City of Toronto which clearly indicate inequalities between neighbourhoods.
 		</p>	
 	</div>
 
