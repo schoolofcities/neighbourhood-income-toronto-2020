@@ -88,7 +88,7 @@
 		.range(coloursD);
 	} else if (currentLayer === "ind_inc_m") {
 		colorDiv = scaleThreshold()
-		.domain([30000,40000,50000,60000])
+		.domain([30000,35000,40000,50000])
 		.range(coloursD);
 	}
 	else {

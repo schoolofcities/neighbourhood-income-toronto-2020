@@ -20,26 +20,26 @@
 	$: path = geoPath(projection);
 	
 	$: colorDiv = scaleThreshold()
-		.domain([-30,-15,15,30])
+		.domain([-10,-5,5,10])
 		.range(coloursD);
 	
 	$: features = tracts2020.features;
 		
-	$: if (currentLayer === "hhld_inc") {
+	$: if (currentLayer === "ind_inc") {
 		features.map(item => {
-		item.properties["ah21"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ah21"]) - +(item.properties["ah16"])* 1.0725) / (+(item.properties["ah16"])* 1.0725)))
+		item.properties["aiati20"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["aiati20"]) - +(item.properties["aiati19"])* 1.0725) / (+(item.properties["aiati19"])* 1.0725)))
 			: (item.properties.colourC = "white");
 		});
-	} else if (currentLayer === "ind_inc") {
+	} else if (currentLayer === "ind_inc_m") {
 		features.map(item => {
-		item.properties["ai21"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["ai21"]) - +(item.properties["ai16"])* 1.0725) / (+(item.properties["ai16"])* 1.0725)))
+		item.properties["miati20"]	> 0
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["miati20"]) - +(item.properties["miati19"])* 1.0725) / (+(item.properties["miati19"])* 1.0725)))
 			: (item.properties.colourC = "white");
 		});
 	} else {
 		features.map(item => {
-		item.properties["li21"]	> 0
+		item.properties["aiati20"]	> 0
 			? (item.properties.colourC = colorDiv(100 * (+(item.properties["li21"]) - +(item.properties["li16"])) / (+(item.properties["li16"]))))
 			: (item.properties.colourC = "white");
 		});

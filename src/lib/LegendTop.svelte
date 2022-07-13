@@ -5,7 +5,7 @@
 	export var coloursSeqRed;
 
 	$: colours = coloursDiv
-	$: title1 = "Census tract average household"
+	$: title1 = "Census tract average after-tax household"
 	$: title2 = "income in 2020"
 	$: labels = [
 		"Less than $75,000",
@@ -17,7 +17,7 @@
 
 	$: if (layer === "ind_inc") {
 		colours = coloursDiv
-		title1 = "Census tract average individual income in 2020" 
+		title1 = "Census tract average after-tax individual income in 2020" 
 		title2 = "among income recipients aged 15 years and up"
 		labels = [
 			"Less than $35,000",
@@ -29,7 +29,7 @@
 	} 
 	else if (layer === "hhld_inc") {
 		colours = coloursDiv
-		title1 = "Census tract average household"
+		title1 = "Census tract average after-tax household"
 		title2 = "income in 2020"
 		labels = [
 			"Less than $75,000",
@@ -41,7 +41,7 @@
 	}
 	else if (layer === "hhld_inc_m") {
 		colours = coloursDiv
-		title1 = "Census tract median household"
+		title1 = "Census tract median after-tax household"
 		title2 = "income in 2020"
 		labels = [
 			"Less than $55,000",
@@ -53,14 +53,14 @@
 	}
 	else if (layer === "ind_inc_m") {
 		colours = coloursDiv
-		title1 = "Census tract median individual income in 2020" 
+		title1 = "Census tract median after-tax individual income in 2020" 
 		title2 = "among income recipients aged 15 years and up"
 		labels = [
 			"Less than $30,000",
-			"$30,000 to $40,000",
+			"$30,000 to $35,000",
+			"$35,000 to $40,000",
 			"$40,000 to $50,000",
-			"$50,000 to $60,000",
-			"More than $60,000"
+			"More than $50,000"
 		]
 	}
 	else if (layer === "pop_den") {

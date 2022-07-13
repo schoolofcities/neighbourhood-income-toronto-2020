@@ -56,6 +56,8 @@
 <Top/>
 
 <main>
+
+	<UnderConstruction/>
 	
 	<div class="title">
 
@@ -80,9 +82,9 @@
 
 	
 
-
 	<div class="text">
-		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create neighbourhood-level maps of the City of Toronto showing where wealth and poverty are concentrated. These highlight ... ... ...</p>
+		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create neighbourhood-level maps of the City of Toronto clearly indicating income inequalities between neighbourhoods. 
+		</p>	
 	</div>
 
 	<div id="top-map">
@@ -143,27 +145,26 @@
 		</div>
 	</div>
 
-
-
-
-
-
+	<div class="text">
+		<p>		
+			These maps highlight greater concentrations of poverty in parts of the downtown core as well as in pockets in the suburbs, particularly in Scarborough and northern Etobicoke, mostly in neighbourhoods with higher densities of rental apartment buildings. Higher-income neighbourhoods are located are located more within the centre of the City (e.g. North Toronto), and within some neighbourhoods in the east (e.g. the Beaches) and west (e.g. the Kingsway).</p>
+		</div>
 	
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>Now let's take a look at how these patterns have changed over time. The following map shows the percent difference in neighbourhood income between 2020 and 2015 (accounting for inflation). The green areas indicate an increase and the purple areas indicate a decrease. These show that ... ... ...</p>
+		<p>Now let's take a look at how these patterns have changed over time. Incomes in 2020 were strongly affected by COVID-19. The following map shows the percent difference in neighbourhood income between 2020 and 2019. The green areas indicate an increase and the purple areas indicate a decrease.</p>
 	</div>
 
 	<LegendDiff coloursDiv={coloursDiv2}/>
 
 	<div class="layer-button-wrapper">
-		<button 
+		<!-- <button 
 		class:selected="{currentLayerDiff === 'pov_lim'}"
 		class:not-selected="{currentLayerDiff !== 'pov_lim'}"
-		on:click="{() => currentLayerDiff = 'pov_lim'}"  id="pov_lim">Poverty Rate</button>
+		on:click="{() => currentLayerDiff = 'pov_lim'}"  id="pov_lim">Poverty Rate</button> -->
 
-		<button 
+		<!-- <button 
 		class:selected="{currentLayerDiff === 'hhld_inc_m'}"
 		class:not-selected="{currentLayerDiff !== 'hhld_inc_m'}"
 		on:click="{() => currentLayerDiff = 'hhld_inc_m'}"
@@ -173,7 +174,7 @@
 		class:selected="{currentLayerDiff === 'hhld_inc'}"
 		class:not-selected="{currentLayerDiff !== 'hhld_inc'}"
 		on:click="{() => currentLayerDiff = 'hhld_inc'}"
-		id="hhld_inc">Average Household Income</button>
+		id="hhld_inc">Average Household Income</button> -->
 
 		<button 
 		class:selected="{currentLayerDiff === 'ind_inc_m'}"
@@ -185,10 +186,10 @@
 		class:not-selected="{currentLayerDiff !== 'ind_inc'}"
 		on:click="{() => currentLayerDiff = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
 
-		<button 
+		<!-- <button 
 		class:selected="{currentLayerDiff === 'pop_den'}"
 		class:not-selected="{currentLayerDiff !== 'pop_den'}"
-		on:click="{() => currentLayerDiff = 'pop_den'}"  id="pop_den">Population Density</button>
+		on:click="{() => currentLayerDiff = 'pop_den'}"  id="pop_den">Population Density</button> -->
 	</div>
 
 	<div class="mapBig">
