@@ -73,7 +73,7 @@
 			</svg>
 		</div>
 		
-		<h3>A first look at 2020 annual income data collected as part of the 2021 census</h3>
+		<h3>Our first look at 2020 annual income data collected as part of the 2021 Canadian census</h3>
 		<br>
 
 		<div id="mini-line"></div>
@@ -83,7 +83,7 @@
 	
 
 	<div class="text">
-		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create neighbourhood-level maps of the City of Toronto clearly indicating income inequalities between neighbourhoods. 
+		<p>On July 13, 2022, Statistics Canada released data on individual and household yearly income for 2020. Using this data, we are able to create maps of the City of Toronto clearly indicating income inequalities between neighbourhoods. 
 		</p>	
 	</div>
 
@@ -153,29 +153,13 @@
 	<div id="mini-line"></div>
 
 	<div class="text">
-		<p>Now let's take a look at how these patterns have changed over time. Incomes in 2020 were strongly affected by COVID-19. The following map shows the percent difference in neighbourhood income between 2020 and 2019. The green areas indicate an increase and the purple areas indicate a decrease.</p>
+		<p>Now let's take a look at how these patterns have changed over time. Incomes in 2020 were strongly affected by COVID-19. The following map shows the percent difference in neighbourhood income between 2019 and 2020. The green areas indicate an increase and the purple areas indicate a decrease. 
+		</p>
 	</div>
 
 	<LegendDiff coloursDiv={coloursDiv2}/>
 
 	<div class="layer-button-wrapper">
-		<!-- <button 
-		class:selected="{currentLayerDiff === 'pov_lim'}"
-		class:not-selected="{currentLayerDiff !== 'pov_lim'}"
-		on:click="{() => currentLayerDiff = 'pov_lim'}"  id="pov_lim">Poverty Rate</button> -->
-
-		<!-- <button 
-		class:selected="{currentLayerDiff === 'hhld_inc_m'}"
-		class:not-selected="{currentLayerDiff !== 'hhld_inc_m'}"
-		on:click="{() => currentLayerDiff = 'hhld_inc_m'}"
-		id="hhld_inc_m">Median Household Income</button>
-
-		<button 
-		class:selected="{currentLayerDiff === 'hhld_inc'}"
-		class:not-selected="{currentLayerDiff !== 'hhld_inc'}"
-		on:click="{() => currentLayerDiff = 'hhld_inc'}"
-		id="hhld_inc">Average Household Income</button> -->
-
 		<button 
 		class:selected="{currentLayerDiff === 'ind_inc_m'}"
 		class:not-selected="{currentLayerDiff !== 'ind_inc_m'}"
@@ -185,21 +169,16 @@
 		class:selected="{currentLayerDiff === 'ind_inc'}"
 		class:not-selected="{currentLayerDiff !== 'ind_inc'}"
 		on:click="{() => currentLayerDiff = 'ind_inc'}" id="ind_inc">Average Individual Income</button>
-
-		<!-- <button 
-		class:selected="{currentLayerDiff === 'pop_den'}"
-		class:not-selected="{currentLayerDiff !== 'pop_den'}"
-		on:click="{() => currentLayerDiff = 'pop_den'}"  id="pop_den">Population Density</button> -->
 	</div>
 
 	<div class="mapBig">
 		<MapDiff coloursD = {coloursDiv2} currentLayer={currentLayerDiff}/>
 	</div>
 
-
-
-
-	<div class="text"> </div>
+	<div class="text">		
+		<p>
+		Interestingly, those neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above). It's uncertain as to why, but it might be because secondary earners in a household stopped were able to stop working during March 2020, meaning they would only have incomes from the first quarter of the year to report.</p>
+	</div>
 
 	<div id="mini-line"></div>
 
