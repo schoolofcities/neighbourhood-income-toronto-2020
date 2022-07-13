@@ -10,7 +10,7 @@ df = pd.read_csv(zf.open(file2021), dtype = str, encoding='latin1')
 df["C1_COUNT_TOTAL"] = df["C1_COUNT_TOTAL"].astype(float)
 df["CHARACTERISTIC_ID"] = df["CHARACTERISTIC_ID"].astype(int)
 
-variable_ids = [1,2,3,4,5,50,56,57]
+variable_ids = [1,2,3,4,5,50,56,57,113,115,128,130,199,201,212,214,229,230,238,239,331]
 
 df = df[df['CHARACTERISTIC_ID'].isin(variable_ids)]
 
