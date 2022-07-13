@@ -4,11 +4,11 @@
 
 <div class="dif-legend">
 	<svg width="300" height="75">
-		<text class="legend-title" x="11" y="15">Percent change from 2015 to 2020</text>
-		<text class="legend-label" x="30" y="35">-30%</text>
-		<text class="legend-label" x="75" y="35">-15%</text>
-		<text class="legend-label" x="120" y="35">+15%</text>
-		<text class="legend-label" x="165" y="35">+30%</text>
+		<text class="legend-title" x="11" y="15">Percent change from 2019 to 2020</text>
+		<text class="legend-label" x="30" y="35">-10%</text>
+		<text class="legend-label" x="75" y="35">-5%</text>
+		<text class="legend-label" x="120" y="35">+5%</text>
+		<text class="legend-label" x="165" y="35">+10%</text>
 		<rect class="box" width="45" height = "15" x="0" y="40" style="fill:{coloursDiv[0]}; stroke: rgb(206, 206, 206);"></rect>
 		<rect class="box" width="45" height = "15" x="45" y="40" style="fill:{coloursDiv[1]}; stroke: rgb(206, 206, 206);"></rect>
 		<rect class="box" width="45" height = "15" x="90" y="40" style="fill:{coloursDiv[2]}; stroke: rgb(206, 206, 206);"></rect>
