@@ -48,6 +48,13 @@
 		name="viewport"
 		content="width=device-width, initial-scale=1, minimum-scale=1"
 	/>
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@jeffallenmaps" />
+	<meta name="twitter:title" content="Wealth inequalities and poverty concentration in Toronto" />
+	<meta name="twitter:description" content="Our first look at 2020 annual income data collected as part of the 2021 Canadian census" />
+	<meta name="twitter:image" content="./assets/TopGraphic.png" />
+
 </svelte:head>
 
 
