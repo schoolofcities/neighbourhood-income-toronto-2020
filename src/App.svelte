@@ -147,7 +147,7 @@
 
 	<div class="text">
 		<p>		
-			These maps highlight greater concentrations of poverty in parts of the downtown core as well as in pockets in the suburbs, particularly in Scarborough and northern Etobicoke, often in neighbourhoods with higher densities of rental apartment buildings. Higher-income neighbourhoods are located more within the centre of the City (e.g. North Toronto), and within some neighbourhoods in the east (e.g. the Beaches) and west (e.g. the Kingsway).</p>
+			These maps highlight greater concentrations of poverty in parts of the downtown core as well as in parts of the suburbs, particularly in Scarborough and northern Etobicoke, often in neighbourhoods with higher densities of rental apartment buildings. Higher-income neighbourhoods are located more within the centre of the City (e.g. North Toronto), and within some neighbourhoods in the east (e.g. the Beaches) and west (e.g. the Kingsway).</p>
 		</div>
 	
 	<div id="mini-line"></div>
