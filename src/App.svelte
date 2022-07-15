@@ -48,17 +48,8 @@
 		name="viewport"
 		content="width=device-width, initial-scale=1, minimum-scale=1"
 	/>
-
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="https://schoolofcities.github.io/" />
-	<meta name="twitter:creator" content="@jeffallenmaps" />
-	<meta name="twitter:title" content="Wealth inequalities and poverty concentration in Toronto" />
-	<meta name="twitter:description" content="Our first look at 2020 annual income data collected as part of the 2021 Canadian census" />
-	<meta name="twitter:image" content="https://raw.githubusercontent.com/schoolofcities/neighbourhood-income-toronto-2020/main/img/TopGraphic.png" />
-
-
-
 </svelte:head>
+
 
 
 
@@ -66,8 +57,6 @@
 <Top/>
 
 <main>
-
-	<UnderConstruction/>
 	
 	<div class="title">
 
@@ -187,7 +176,7 @@
 
 	<div class="text">		
 		<p>
-		The neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above), meaning an overall decrease in income inequality. This aligns with Statistics Canada's <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/220713/dq220713d-eng.htm"><b>findings</b></a> that income inequality across Canada decreased due to temporary pandemic-related benefits (e.g. CERB). Drops in income in wealthier areas on the map above potentially indicate fewer benefits for households in wealthier neighbourhoods. It's also possible that secondary earners in wealthier households were more likely to voluntarily stop work in the spring of 2020, not receive pandemic-related benefits, and thus only have a portion of a year's income to report.</p>
+		The neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above). This appears to align with Statistics Canada's <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/220713/dq220713d-eng.htm"><b>findings</b></a> that income inequality across Canada decreased due to temporary pandemic-related benefits (e.g. CERB). Drops in income in wealthier areas on the map above potentially indicate fewer pandemic-related benefits for households in wealthier neighbourhoods. It's also possible that secondary earners in wealthier households were more likely to voluntarily stop work in the spring of 2020, not receive pandemic-related benefits, and thus only have a portion of a year's income to report.</p>
 	</div>
 
 	<div id="mini-line"></div>
