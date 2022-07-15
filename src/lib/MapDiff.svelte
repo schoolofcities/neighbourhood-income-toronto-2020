@@ -28,13 +28,13 @@
 	$: if (currentLayer === "ind_inc") {
 		features.map(item => {
 		item.properties["aiati20"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["aiati20"]) - +(item.properties["aiati19"])* 1.0725) / (+(item.properties["aiati19"])* 1.0725)))
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["aiati20"]) - +(item.properties["aiati19"])) / (+(item.properties["aiati19"]))))
 			: (item.properties.colourC = "white");
 		});
 	} else if (currentLayer === "ind_inc_m") {
 		features.map(item => {
 		item.properties["miati20"]	> 0
-			? (item.properties.colourC = colorDiv(100 * (+(item.properties["miati20"]) - +(item.properties["miati19"])* 1.0725) / (+(item.properties["miati19"])* 1.0725)))
+			? (item.properties.colourC = colorDiv(100 * (+(item.properties["miati20"]) - +(item.properties["miati19"])) / (+(item.properties["miati19"]))))
 			: (item.properties.colourC = "white");
 		});
 	} else {

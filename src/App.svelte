@@ -176,7 +176,7 @@
 
 	<div class="text">		
 		<p>
-		The neighbourhoods that experienced a decrease in average and median annual incomes between 2019 and 2020 are the wealthiest in the city (comparing with the map above). This appears to align with Statistics Canada's <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/220713/dq220713d-eng.htm"><b>findings</b></a> that income inequality across Canada decreased due to temporary pandemic-related benefits (e.g. CERB). Drops in income in wealthier areas on the map above potentially indicate fewer pandemic-related benefits for households in wealthier neighbourhoods. It's also possible that secondary earners in wealthier households were more likely to voluntarily stop work in the spring of 2020, not receive pandemic-related benefits, and thus only have a portion of a year's income to report.</p>
+		It was mostly lower-income neighbourhoods that experienced an increase in average and median annual incomes between 2019 and 2020 (comparing with the map above). This appears to align with Statistics Canada's <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/220713/dq220713d-eng.htm"><b>findings</b></a> that income inequality across Canada decreased due to temporary pandemic-related benefits (e.g. CERB). Drops in income in wealthier neighbourhoods on the map above potentially indicate fewer pandemic-related benefits for households in these areas. It's also possible that secondary earners in wealthier households were more likely to voluntarily stop work in the spring of 2020, not receive pandemic-related benefits, and thus only have a portion of a year's income to report.</p>
 	</div>
 
 	<div id="mini-line"></div>
