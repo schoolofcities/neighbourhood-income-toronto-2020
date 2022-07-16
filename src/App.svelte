@@ -232,7 +232,7 @@
 		</p>
 			
 		<p>
-		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a> and the <a href="https://mdl.library.utoronto.ca/">Map and Data Library</a> at the University of Toronto. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the poverty rate is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>, a poverty line defined by Statistics Canada. The map comparing 2015 to 2020 data makes use of the <a href="https://github.com/jamaps/CLTD">Canadian Longitudinal Tract Database</a> to apportion data to the same spatial units.
+		The 2021 census data were accessed from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm?Lang=E">Statistics Canada</a> while the historical data were accessed via <a href="http://chass.toronto.edu/">CHASS</a> and the <a href="https://mdl.library.utoronto.ca/">Map and Data Library</a> at the University of Toronto. The spatial units on the maps are neighbourhood-sized census tracts, which approximately correspond to approximately 2,500 and 8,000 residents. Data on the poverty rate is based on the after-tax <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=fam021">Low-Income Measure</a>, a poverty line defined by Statistics Canada.
 		</p>
 
 		<p>
